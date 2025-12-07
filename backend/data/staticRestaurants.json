@@ -1,0 +1,17 @@
+[
+    {
+        "city": "Paris",
+        "restaurant": "Le Coq Moderne",
+        "description": "Modern French bistro trending for its seasonal tasting menu.",
+        "lat": 48.8566,
+        "lng": 2.3522
+    },
+    {
+        "city": "New York",
+        "restaurant": "I Sodi",
+        "description": "Tuscan trattoria known for fresh pasta.",
+        "lat": 40.732,
+        "lng": -74.002
+    }
+]
+  
