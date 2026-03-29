@@ -35,11 +35,26 @@ Open `http://localhost:5173` on desktop, or `http://192.168.1.156:5173` on phone
 
 `GET /api/restaurants?city=Paris` — returns `{ success, data }` or `{ success: false, message }`
 
+## Project vision — "Hottest Spot in Town"
+
+Show the single top-rated/trending restaurant per city as a pin on a world map. Click/tap reveals details via tooltip (desktop) or bottom sheet (mobile). Mobile experience is the priority.
+
+## Roadmap
+
+1. **Data** — Populate 100 most populous US cities into `cities.json` and `staticRestaurants.json` (name, one-line description, lat/lng per restaurant)
+2. **Geolocation** — Auto-detect user location on page load, zoom map to ~50-mile radius
+3. **UI** — Dark mode map, black nav header with left-aligned "hottest spot in town" title, consistent typography
+
+## Development approach
+
+- Present step-by-step plan and get approval before implementing each feature
+- Smaller, testable commits with clear communication about what changed and how to test
+
 ## Known gaps
 
 - London, Tokyo, Mumbai have map pins but no restaurant data in `staticRestaurants.json`
 - `backend/utils/responseFormat.js` is empty
-- Backend IP in `WorldMap.jsx` is hardcoded to `192.168.1.156:3001` (update if IP changes)
+- Frontend uses a Vite proxy (`/api` → `http://localhost:3001`) to avoid mixed content issues with HTTPS dev server
 
 ## Stack
 

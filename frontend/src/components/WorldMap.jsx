@@ -1,9 +1,21 @@
 import { useEffect, useState } from "react";
-import { MapContainer, TileLayer } from "react-leaflet";
+import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import CityMarker from "./CityMarker";
 import BottomSheet from "./BottomSheet";
 import "../styles/map.css";
 import { useIsMobile } from "../hooks/useIsMobile";
+
+function GeolocateOnLoad() {
+    const map = useMap();
+    useEffect(() => {
+        if (!navigator.geolocation) return;
+        navigator.geolocation.getCurrentPosition(
+            ({ coords }) => map.flyTo([coords.latitude, coords.longitude], 10),
+            () => {} // denied or unavailable — keep default world view
+        );
+    }, [map]);
+    return null;
+}
 
 export default function WorldMap() {
     const [cities, setCities] = useState([]);
@@ -19,9 +31,7 @@ export default function WorldMap() {
     }, []);
 
     const handleCitySelect = async (city) => {
-        const res = await fetch(
-            `http://192.168.1.156:3001/api/restaurants?city=${city}`
-        );
+        const res = await fetch(`/api/restaurants?city=${city}`);
         const data = await res.json();
 
         setSelected(data);
@@ -31,8 +41,10 @@ export default function WorldMap() {
     return (
         <>
             <MapContainer center={[20, 0]} zoom={2} id="map">
+            <GeolocateOnLoad />
             <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>'
             />
 
             {cities.map(city => (
