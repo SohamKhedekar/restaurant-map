@@ -20,12 +20,9 @@ export default function WorldMap() {
 
     const handleCitySelect = async (city) => {
         const res = await fetch(
-            `http://192.168.1.124:3001/api/restaurants?city=${city}`
+            `http://192.168.1.156:3001/api/restaurants?city=${city}`
         );
         const data = await res.json();
-        if (typeof data === "string") {
-            data = JSON.parse(data);
-        }
 
         setSelected(data);
         setSheetOpen(true);
