@@ -22,7 +22,7 @@
     left: 0;
     right: 0;
 
-    background: white;
+    background: #283B60;
     padding: 20px;
 
     border-top-left-radius: 16px;
@@ -41,9 +41,10 @@
 .panel h2 {
     margin: 0;
     font-size: 20px;
+    color: #ffffff;
 }
 
 .panel p {
     margin-top: 8px;
-    color: #555;
+    color: #ffffff;
 }

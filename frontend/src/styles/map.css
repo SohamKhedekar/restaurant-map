@@ -3,4 +3,20 @@
     flex: 1;
     background: #0a0a0a;
 }
+
+/* Desktop popup */
+.leaflet-popup-content-wrapper {
+    background: #283B60 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.5) !important;
+}
+
+.leaflet-popup-tip {
+    background: #283B60 !important;
+}
+
+.leaflet-popup-content-wrapper p,
+.leaflet-popup-content-wrapper strong {
+    color: #ffffff !important;
+}
   
