@@ -15,6 +15,9 @@ export default function HotspotCard({ hotspot, open, onClose, coarse }) {
     useEffect(() => {
         if (!open) return;
         const onKeyDown = event => {
+            // Another control may have already handled this Escape — the
+            // search claims it to close itself without closing the card.
+            if (event.defaultPrevented) return;
             if (event.key === "Escape") onClose();
         };
         window.addEventListener("keydown", onKeyDown);

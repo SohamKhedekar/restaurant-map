@@ -28,6 +28,9 @@ export default function Search({ onSelect }) {
 
     const handleKeyDown = (event) => {
         if (event.key === "Escape") {
+            // Claims the keystroke so the open card does not also close: both
+            // this and the card's window listener see the same event.
+            event.preventDefault();
             setQuery("");
             close();
             return;

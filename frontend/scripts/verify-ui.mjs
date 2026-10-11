@@ -10,7 +10,7 @@
  * Screenshots land in screenshots/ for a human to glance at afterwards.
  */
 import { spawn } from "node:child_process";
-import { mkdir } from "node:fs/promises";
+import { mkdir, readFile } from "node:fs/promises";
 import { chromium, devices } from "playwright";
 
 const PORT = 4173;
@@ -60,6 +60,22 @@ function luminance(color) {
     return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
 }
 
+/**
+ * The production security headers live in public/_headers, which `vite preview`
+ * does not apply. The CSP is read from there and attached to the document here,
+ * so a policy that breaks the app fails this check rather than the live site.
+ */
+const headersFile = await readFile(new URL("../public/_headers", import.meta.url), "utf8");
+const csp = headersFile
+    .split("\n")
+    .find(line => line.trim().toLowerCase().startsWith("content-security-policy:"))
+    ?.split(":").slice(1).join(":").trim();
+
+if (!csp) {
+    console.error("no Content-Security-Policy found in public/_headers");
+    process.exit(1);
+}
+
 await mkdir(SHOTS, { recursive: true });
 
 console.log("starting preview server…");
@@ -87,7 +103,21 @@ try {
             permissions: ["geolocation"],
             locale: "en-US",
         });
+        // Serve the document with the production CSP attached.
+        await context.route(`${BASE}/`, async route => {
+            const response = await route.fetch();
+            await route.fulfill({
+                response,
+                headers: { ...response.headers(), "content-security-policy": csp },
+            });
+        });
+
         const page = await context.newPage();
+
+        const cspViolations = [];
+        page.on("console", msg => {
+            if (/content security policy/i.test(msg.text())) cspViolations.push(msg.text());
+        });
 
         const consoleErrors = [];
         page.on("console", msg => { if (msg.type() === "error") consoleErrors.push(msg.text()); });
@@ -176,8 +206,18 @@ try {
         const firstResult = await page.locator(".search-result-city").first().innerText().catch(() => "");
         check(firstResult === "New York", 'search "nyc" finds New York', `got "${firstResult}"`);
         await page.locator(".search-input").press("Escape");
-        const searchClosed = await page.locator(".search.open").count();
-        check(searchClosed === 0, "Escape closes the search");
+        await page.waitForTimeout(200);
+        check(await page.locator(".search.open").count() === 0, "Escape closes the search");
+        check(
+            await page.locator(".card-layer.open").count() > 0,
+            "Escape in the search leaves the card open"
+        );
+
+        check(
+            cspViolations.length === 0,
+            "production CSP does not block the app",
+            cspViolations.slice(0, 2).join(" | ")
+        );
 
         check(consoleErrors.length === 0, "no console errors", consoleErrors.slice(0, 2).join(" | "));
 

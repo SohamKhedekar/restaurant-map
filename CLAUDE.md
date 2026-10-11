@@ -134,6 +134,25 @@ coordinate. Output lands in `scripts/geocode-report.json` for review.
 - Present step-by-step plan and get approval before implementing each feature
 - Smaller, testable commits with clear communication about what changed and how to test
 
+## Security and privacy
+
+No secrets exist in this project, by design: no backend, no database, no auth, and a
+keyless tile provider. Nothing should ever introduce an API key into the client bundle —
+if a service needs one, it needs a serverless function to hold it.
+
+- **Visitor location never leaves the device.** Coordinates go to `localStorage`, the
+  nearest-hotspot search runs locally over the bundled JSON, and `directionsUrl()` uses
+  name + city rather than coordinates. There are no outbound requests in app code.
+- **Fonts are self-hosted** (`@fontsource-variable/inter`). Google Fonts would see every
+  visitor's IP. The only third party the page contacts is the Esri tile server.
+- **`public/_headers`** carries the production CSP and friends for Cloudflare Pages.
+  `verify:ui` reads the CSP from that file and applies it to the page it tests, so a
+  policy that breaks the app fails the check instead of the live site. Verified by
+  removing the tile origin from `img-src` and watching it fail.
+- Git history contains the author's old `user@machine.local` address and some RFC1918
+  LAN addresses. Both are harmless — private IPs do not geolocate — and not worth a
+  history rewrite that would break every existing clone.
+
 ## Known gaps
 
 - `useIsMobile` sniffs touch support once at render, so a touchscreen laptop gets the
