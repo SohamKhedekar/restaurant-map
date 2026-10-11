@@ -36,6 +36,16 @@ is self-signed, so phones show a warning that has to be accepted once.
 
 ## Behavior
 
+- **On load:** a cached fix (≤12h, `localStorage`) is read *during the first render*, so
+  the map opens already centred on the nearest hotspot instead of flashing the world view
+  and correcting itself. A fresh fix arrives via callback and flies the map, but only if
+  the automatic jump has not already happened — a late fix must not yank the map away
+  from wherever the user has since panned.
+- Auto-fly is skipped beyond 250 km, so someone in Europe gets the world view rather than
+  being thrown to Boston. The "near me" button still works on request.
+- Nearest is plain great-circle distance, which is occasionally surprising: Brooklyn
+  resolves to Jersey City (9 km) over New York (11 km). Fixing that properly needs
+  population weighting or a reverse-geocode, neither of which seemed worth it yet.
 - **Desktop:** hover a city pin → shows Leaflet `<Popup>` (phase 4 moves this to click + card)
 - **Mobile:** tap a city pin → opens `<BottomSheet>`
 - Both read from the in-memory data, so there is no network request on interaction.
@@ -53,9 +63,7 @@ In progress — a phased redesign toward a clean, modern, mobile-first UX:
 
 0. **Static architecture** — one data file, backend deleted, free static hosting ✅
 1. **Data model** — cuisine + neighborhood + real coordinates + validator ✅
-2. **Location** — haversine to the *nearest* hotspot (not raw coords), non-blocking
-   with a timeout, cached in `localStorage`, plus a "near me" button for the
-   denied/timeout path
+2. **Location** — nearest-hotspot geolocation ✅
 3. **Search** — client-side ranked city search; full-screen overlay on mobile,
    dropdown on desktop
 4. **One card** — collapse the hover-popup/bottom-sheet split into a single
@@ -100,6 +108,10 @@ coordinate. Output lands in `scripts/geocode-report.json` for review.
 - `#root { height: 100vh }` is taller than the visible viewport on iOS Safari; needs `100dvh`.
 - The bottom sheet has no safe-area inset, so its padding runs under the home indicator.
 - `src/index.css` still carries Vite boilerplate that fights the palette.
+- React 19's `react-hooks/set-state-in-effect` lint rule rejects synchronous `setState`
+  inside an effect. Responses from external systems (geolocation, fetch) must update
+  state from their own callbacks, and anything knowable at first render belongs in a
+  `useState` initialiser. `useGeolocation` is built that way deliberately.
 - Only the 100 most populous US cities are covered — no international hotspots.
 
 ## Stack
