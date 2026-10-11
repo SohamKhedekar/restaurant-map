@@ -89,9 +89,16 @@ local web + phone testing comes first.
 
 ```bash
 cd frontend
-npm run check:data   # validate hotspots.json — exits non-zero on error
-npm run geocode      # one-time Nominatim pass; rewrites coords + neighborhoods
+npm run check:data    # validate hotspots.json — exits non-zero on error
+npm run check:styles  # catch orphaned stylesheets and undefined CSS variables
+npm run geocode       # one-time Nominatim pass; rewrites coords + neighborhoods
 ```
+
+`check:styles` exists because `index.css` once sat unimported while lint and build
+both passed: Vite bundles only what is reachable from the entry, so every design
+token in it resolved to nothing, giving transparent cards and black inherited text.
+CSS fails silently — an undefined `var()` is the empty string, not an error — so run
+this after adding a stylesheet or renaming a token.
 
 `check:data` catches missing/unknown keys, duplicate cities, out-of-range or swapped
 coordinates, a bad `precision` value, and two hotspots sharing a point (which would
