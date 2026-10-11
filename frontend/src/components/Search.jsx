@@ -90,6 +90,10 @@ export default function Search({ onSelect }) {
                 )}
             </div>
 
+            {open && !query.trim() && (
+                <p className="search-hint">Type a city, restaurant or cuisine</p>
+            )}
+
             {showResults && (
                 <ul className="search-results" id={listId} role="listbox">
                     {results.map((hotspot, i) => (

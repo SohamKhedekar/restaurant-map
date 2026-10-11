@@ -97,8 +97,21 @@ local web + phone testing comes first.
 cd frontend
 npm run check:data    # validate hotspots.json — exits non-zero on error
 npm run check:styles  # catch orphaned stylesheets and undefined CSS variables
+npm run verify:ui     # build, render in a real browser, assert, screenshot
 npm run geocode       # one-time Nominatim pass; rewrites coords + neighborhoods
 ```
+
+`verify:ui` is the gate that can actually see the page. It builds, serves the build,
+drives Chromium at desktop and iPhone sizes with geolocation stubbed to San Francisco,
+and asserts 14 things per viewport — tokens resolved, pins and tiles rendered, the card
+opened on the right city with an opaque background and light text, the card fully inside
+the viewport, the layer not blocking the map, the location button not stuck, search
+ranking, and no console errors. Screenshots land in `screenshots/` (gitignored) for a
+human to glance at.
+
+Two lessons are baked into it: assert that enough tiles loaded rather than at least one
+(a single tile still means a black map), and wait for `document.fonts.ready` before
+screenshotting, because web fonts reflow the card after load.
 
 `check:styles` exists because `index.css` once sat unimported while lint and build
 both passed: Vite bundles only what is reachable from the entry, so every design

@@ -5,9 +5,22 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(['dist', 'screenshots']),
   {
-    files: ['**/*.{js,jsx}'],
+    // Build config and data tooling run in Node, not the browser, and were
+    // previously either unlinted (.mjs) or linted with the wrong globals.
+    files: ['vite.config.js', 'scripts/**/*.{js,mjs}'],
+    extends: [js.configs.recommended],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      // Node for the scripts themselves, browser because Playwright's
+      // page.evaluate() callbacks are serialised and run in the page.
+      globals: { ...globals.node, ...globals.browser },
+    },
+  },
+  {
+    files: ['src/**/*.{js,jsx}'],
     extends: [
       js.configs.recommended,
       reactHooks.configs.flat.recommended,

@@ -67,6 +67,10 @@
 
 .search-backdrop { display: none; }
 
+/* Only meaningful on touch, where an open search covers the whole screen and
+   would otherwise be a blank panel until the first keystroke. */
+.search-hint { display: none; }
+
 /* ── RESULTS ───────────────────────────────────────────────────────────── */
 .search-results {
     position: absolute;
@@ -174,6 +178,16 @@
     }
 
     .search.open .search-cancel { display: block; }
+
+    .search.open .search-hint {
+        display: block;
+        position: relative;
+        z-index: 1;
+        margin-top: 24px;
+        color: var(--text-faint);
+        font-size: 14px;
+        text-align: center;
+    }
 
     .search.open .search-results {
         position: relative;

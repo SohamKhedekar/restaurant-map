@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "check:data": "node scripts/check-data.mjs",
     "geocode": "node scripts/geocode.mjs",
-    "check:styles": "node scripts/check-styles.mjs"
+    "check:styles": "node scripts/check-styles.mjs",
+    "verify:ui": "vite build && node scripts/verify-ui.mjs"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
@@ -28,6 +29,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "playwright": "^1.64.0",
     "vite": "^7.2.4"
   }
 }
