@@ -1,0 +1,673 @@
+[
+  {
+    "city": "Albuquerque",
+    "name": "Frenchish",
+    "status": "ok",
+    "movedKm": 4.1,
+    "neighborhood": "Nob Hill",
+    "osm": "Frenchish, 3509, Central Avenue Northeast, Nob Hill, Albuque"
+  },
+  {
+    "city": "Anaheim",
+    "name": "Poppy & Seed",
+    "status": "ok",
+    "movedKm": 0.5,
+    "neighborhood": null,
+    "osm": "Poppy & Seed, 350, South Anaheim Boulevard, Anaheim, Orange "
+  },
+  {
+    "city": "Anchorage",
+    "name": "Moose's Tooth Pub & Pizzeria",
+    "status": "ok",
+    "movedKm": 3.5,
+    "neighborhood": null,
+    "osm": "Moose's Tooth Pub & Pizzeria, 3300, Old Seward Highway, Anch"
+  },
+  {
+    "city": "Arlington",
+    "name": "Cacharel Restaurant",
+    "status": "unresolved"
+  },
+  {
+    "city": "Atlanta",
+    "name": "Lazy Betty",
+    "status": "ok",
+    "movedKm": 3.6,
+    "neighborhood": "Midtown",
+    "osm": "Lazy Betty, 999, Peachtree Street Northeast, Midtown, Old Fo"
+  },
+  {
+    "city": "Aurora",
+    "name": "Annette",
+    "status": "ok",
+    "movedKm": 4.7,
+    "neighborhood": null,
+    "osm": "Annette Scratch to Table, 2501, Dallas Street, Aurora, Color"
+  },
+  {
+    "city": "Austin",
+    "name": "Olamaie",
+    "status": "unresolved"
+  },
+  {
+    "city": "Bakersfield",
+    "name": "Noriega's Hotel Restaurant",
+    "status": "unresolved"
+  },
+  {
+    "city": "Baltimore",
+    "name": "Ammoora",
+    "status": "unresolved"
+  },
+  {
+    "city": "Boise City",
+    "name": "KIN",
+    "status": "ok",
+    "movedKm": 0.3,
+    "neighborhood": "Downtown",
+    "osm": "KIN, 999, West Main Street, Downtown, North End, Boise, Ada "
+  },
+  {
+    "city": "Boston",
+    "name": "Menton",
+    "status": "ok",
+    "movedKm": 9.8,
+    "neighborhood": "Mattapan",
+    "osm": "Menton Street, Mattapan, Boston, Suffolk County, Massachuset"
+  },
+  {
+    "city": "Buffalo",
+    "name": "Waxlight Bar à Vin",
+    "status": "ok",
+    "movedKm": 6.4,
+    "neighborhood": null,
+    "osm": "Waxlight Bar a Vin, 27, Chandler Street, Buffalo, Erie Count"
+  },
+  {
+    "city": "Chandler",
+    "name": "Kai Restaurant",
+    "status": "unresolved"
+  },
+  {
+    "city": "Charlotte",
+    "name": "Kindred",
+    "status": "ok",
+    "movedKm": 6.3,
+    "neighborhood": "Citiside",
+    "osm": "Kindred Drive, Citiside, Plaza Shamrock, Charlotte, Mecklenb"
+  },
+  {
+    "city": "Chesapeake",
+    "name": "Cork & Bull Chophouse",
+    "status": "unresolved"
+  },
+  {
+    "city": "Chicago",
+    "name": "Alinea",
+    "status": "ok",
+    "movedKm": 4.2,
+    "neighborhood": "Ranch Triangle",
+    "osm": "Alinea, 1723, North Halsted Street, Ranch Triangle, Lincoln "
+  },
+  {
+    "city": "Chula Vista",
+    "name": "Romesco Mexiterranean Bistro",
+    "status": "ok",
+    "movedKm": 5.2,
+    "neighborhood": null,
+    "osm": "Romesco Mexiterranean Bistro, 4346, Bonita Road, Bonita, San"
+  },
+  {
+    "city": "Cincinnati",
+    "name": "The Aperture",
+    "status": "unresolved"
+  },
+  {
+    "city": "Cleveland",
+    "name": "Cordelia",
+    "status": "ok",
+    "movedKm": 0.4,
+    "neighborhood": "Downtown Cleveland",
+    "osm": "Cordelia, 2058, East 4th Street, Downtown Cleveland, Clevela"
+  },
+  {
+    "city": "Colorado Springs",
+    "name": "The Rabbit Hole",
+    "status": "ok",
+    "movedKm": 0.2,
+    "neighborhood": "Historic Uptown",
+    "osm": "The Rabbit Hole, 101, North Tejon Street, Historic Uptown, D"
+  },
+  {
+    "city": "Columbus",
+    "name": "Agni",
+    "status": "unresolved"
+  },
+  {
+    "city": "Corpus Christi",
+    "name": "Waterfront Seafood at the Congressman Solomon P. Ortiz International Center",
+    "status": "unresolved"
+  },
+  {
+    "city": "Dallas",
+    "name": "Georgie by Curtis Stone",
+    "status": "unresolved"
+  },
+  {
+    "city": "Denver",
+    "name": "The Wolf's Tailor",
+    "status": "ok",
+    "movedKm": 4.1,
+    "neighborhood": "Sunnyside",
+    "osm": "The Wolf's Tailor, 4058, Tejon Street, Sunnyside, Denver, Co"
+  },
+  {
+    "city": "Detroit",
+    "name": "Freya",
+    "status": "ok",
+    "movedKm": 4.9,
+    "neighborhood": "New Center",
+    "osm": "Freya, 2929, East Grand Boulevard, New Center, Detroit, Wayn"
+  },
+  {
+    "city": "Durham",
+    "name": "Mateo Bar de Tapas",
+    "status": "unresolved"
+  },
+  {
+    "city": "El Paso",
+    "name": "Cafe Central",
+    "status": "ok",
+    "movedKm": 0.5,
+    "neighborhood": "Downtown Historic District",
+    "osm": "Cafe Central, 109, North Oregon Street, Downtown Historic Di"
+  },
+  {
+    "city": "Fort Wayne",
+    "name": "Coney Island Wiener Stand",
+    "status": "unresolved"
+  },
+  {
+    "city": "Fort Worth",
+    "name": "Reata Restaurant",
+    "status": "ok",
+    "movedKm": 0.2,
+    "neighborhood": "Downtown Fort Worth",
+    "osm": "Reata Restaurant, 310, Houston Street, Downtown Fort Worth, "
+  },
+  {
+    "city": "Fremont",
+    "name": "Massimo's Ristorante",
+    "status": "ok",
+    "movedKm": 1.9,
+    "neighborhood": null,
+    "osm": "Massimo's, Farwell Drive, Mowry East Shopping Center, Fremon"
+  },
+  {
+    "city": "Fresno",
+    "name": "Annex Kitchen",
+    "status": "ok",
+    "movedKm": 8.7,
+    "neighborhood": null,
+    "osm": "The Annex Kitchen, 2257, West Shaw Avenue, Fresno, Fresno Co"
+  },
+  {
+    "city": "Garland",
+    "name": "Mariana's Mexican Food",
+    "status": "unresolved"
+  },
+  {
+    "city": "Gilbert",
+    "name": "Joe's Farm Grill",
+    "status": "ok",
+    "movedKm": 6.8,
+    "neighborhood": null,
+    "osm": "Joe's Farm Grill, 3000, East Ray Road, Gilbert, Maricopa Cou"
+  },
+  {
+    "city": "Glendale",
+    "name": "Arrowhead Grill",
+    "status": "ok",
+    "movedKm": 13.5,
+    "neighborhood": null,
+    "osm": "Arrowhead Grill, 8280, West Union Hills Drive, Glendale, Mar"
+  },
+  {
+    "city": "Greensboro",
+    "name": "Machete",
+    "status": "ok",
+    "movedKm": 0.8,
+    "neighborhood": null,
+    "osm": "MACHETE, 600, Battleground Avenue, Fisher Park, Greensboro, "
+  },
+  {
+    "city": "Henderson",
+    "name": "Locale Italian Kitchen",
+    "status": "unresolved"
+  },
+  {
+    "city": "Honolulu",
+    "name": "La Mer",
+    "status": "ok",
+    "movedKm": 4.2,
+    "neighborhood": "Waikīkī",
+    "osm": "La Mer, Kalia Road, Waikīkī, East Honolulu, Honolulu, Honolu"
+  },
+  {
+    "city": "Houston",
+    "name": "March",
+    "status": "unresolved"
+  },
+  {
+    "city": "Huntsville",
+    "name": "Cotton Row Restaurant",
+    "status": "ok",
+    "movedKm": 0.1,
+    "neighborhood": null,
+    "osm": "Cotton Row, South Side Square, Echols Hill, Huntsville, Madi"
+  },
+  {
+    "city": "Indianapolis",
+    "name": "Bluebeard",
+    "status": "ok",
+    "movedKm": 1.6,
+    "neighborhood": "Fletcher Place",
+    "osm": "Bluebeard, 653, Virginia Avenue, Fletcher Place, Indianapoli"
+  },
+  {
+    "city": "Irvine",
+    "name": "Oliver's Prime",
+    "status": "unresolved"
+  },
+  {
+    "city": "Irving",
+    "name": "Andalous Mediterranean Grill",
+    "status": "ok",
+    "movedKm": 9.3,
+    "neighborhood": "Las Colinas",
+    "osm": "Andalous Mediterranean Grill, 6450, North MacArthur Boulevar"
+  },
+  {
+    "city": "Jacksonville",
+    "name": "Restaurant Orsay",
+    "status": "ok",
+    "movedKm": 6.3,
+    "neighborhood": "Avondale",
+    "osm": "Restaurant Orsay, Park Street, Avondale, Murray Hill, Jackso"
+  },
+  {
+    "city": "Jersey City",
+    "name": "Battello",
+    "status": "ok",
+    "movedKm": 1.2,
+    "neighborhood": "Newport",
+    "osm": "Battello, 502, Washington Boulevard, Newport, Jersey City, H"
+  },
+  {
+    "city": "Kansas City",
+    "name": "Affäre",
+    "status": "ok",
+    "movedKm": 1.2,
+    "neighborhood": "Downtown Kansas City",
+    "osm": "Affäre, 1911, Main Street, Downtown Kansas City, Kansas City"
+  },
+  {
+    "city": "Laredo",
+    "name": "Tack Room Tavern",
+    "status": "unresolved"
+  },
+  {
+    "city": "Las Vegas",
+    "name": "é by José Andrés",
+    "status": "ok",
+    "movedKm": 7.3,
+    "neighborhood": null,
+    "osm": "é by José Andrés, 3708, South Las Vegas Boulevard, Paradise,"
+  },
+  {
+    "city": "Lexington",
+    "name": "Coles 735 Main",
+    "status": "unresolved"
+  },
+  {
+    "city": "Lincoln",
+    "name": "Dish",
+    "status": "ok",
+    "movedKm": 0.2,
+    "neighborhood": "Downtown",
+    "osm": "Dish, 1100, O Street, Downtown, Capitol View, Lincoln, Lanca"
+  },
+  {
+    "city": "Long Beach",
+    "name": "Michael's on Naples",
+    "status": "unresolved"
+  },
+  {
+    "city": "Los Angeles",
+    "name": "Kato",
+    "status": "ok",
+    "movedKm": 2,
+    "neighborhood": "Arts District",
+    "osm": "Kato, 777, South Alameda Street, Arts District, Downtown, Lo"
+  },
+  {
+    "city": "Louisville",
+    "name": "North of Bourbon",
+    "status": "unresolved"
+  },
+  {
+    "city": "Lubbock",
+    "name": "West Table Kitchen & Bar",
+    "status": "unresolved"
+  },
+  {
+    "city": "Madison",
+    "name": "L'Etoile",
+    "status": "ok",
+    "movedKm": 1.6,
+    "neighborhood": "First Settlement",
+    "osm": "L'Etoile, 1, South Pinckney Street, First Settlement, Downto"
+  },
+  {
+    "city": "Memphis",
+    "name": "Hog & Hominy",
+    "status": "unresolved"
+  },
+  {
+    "city": "Mesa",
+    "name": "Republique Kitchen & Bar",
+    "status": "unresolved"
+  },
+  {
+    "city": "Miami",
+    "name": "Boia De",
+    "status": "unresolved"
+  },
+  {
+    "city": "Milwaukee",
+    "name": "Sanford Restaurant",
+    "status": "ok",
+    "movedKm": 1.3,
+    "neighborhood": "Brady Street",
+    "osm": "Sanford, 1547, North Jackson Street, Brady Street, Lower Eas"
+  },
+  {
+    "city": "Minneapolis",
+    "name": "Hai Hai",
+    "status": "ok",
+    "movedKm": 3.6,
+    "neighborhood": "Holland",
+    "osm": "Hai Hai, 2121, Northeast 22nd Avenue, Holland, Northeast, Mi"
+  },
+  {
+    "city": "Nashville",
+    "name": "Bastion",
+    "status": "ok",
+    "movedKm": 2.6,
+    "neighborhood": "Wedgewood-Houston",
+    "osm": "Bastion, 434, Houston Street, Wedgewood-Houston, Nashville, "
+  },
+  {
+    "city": "New Orleans",
+    "name": "Commander's Palace",
+    "status": "ok",
+    "movedKm": 2.8,
+    "neighborhood": "Central City Historic District",
+    "osm": "Commander's Palace, 1403, Washington Avenue, Central City Hi"
+  },
+  {
+    "city": "New York",
+    "name": "Tatiana by Kwame Onwuachi",
+    "status": "ok",
+    "movedKm": 6.9,
+    "neighborhood": "Lincoln Square",
+    "osm": "Tatiana by Kwame Onwuachi, 10, Lasdon Colonnade, Lincoln Squ"
+  },
+  {
+    "city": "Newark",
+    "name": "Seabra's Marisqueira",
+    "status": "unresolved"
+  },
+  {
+    "city": "Norfolk",
+    "name": "Cure Restaurant",
+    "status": "unresolved"
+  },
+  {
+    "city": "North Las Vegas",
+    "name": "Gilley's Saloon",
+    "status": "unresolved"
+  },
+  {
+    "city": "Oakland",
+    "name": "Burdell",
+    "status": "ok",
+    "movedKm": 3.4,
+    "neighborhood": "Temescal",
+    "osm": "Burdell, 4640, Telegraph Avenue, Temescal, North Oakland, Oa"
+  },
+  {
+    "city": "Oklahoma City",
+    "name": "Bar Sen",
+    "status": "unresolved"
+  },
+  {
+    "city": "Omaha",
+    "name": "The Boiler Room",
+    "status": "unresolved"
+  },
+  {
+    "city": "Orlando",
+    "name": "Victoria & Albert's",
+    "status": "unresolved"
+  },
+  {
+    "city": "Philadelphia",
+    "name": "Zahav",
+    "status": "ok",
+    "movedKm": 1.8,
+    "neighborhood": "Center City",
+    "osm": "Zahav, 237, Saint James Place, Society Hill Towers, Center C"
+  },
+  {
+    "city": "Phoenix",
+    "name": "Bacanora",
+    "status": "ok",
+    "movedKm": 1.7,
+    "neighborhood": "Downtown",
+    "osm": "Bacanora PHX, 1301, Grand Avenue, Downtown, Central City, Ph"
+  },
+  {
+    "city": "Pittsburgh",
+    "name": "Pusadee's Garden",
+    "status": "unresolved"
+  },
+  {
+    "city": "Plano",
+    "name": "Uchi Dallas",
+    "status": "unresolved"
+  },
+  {
+    "city": "Port St. Lucie",
+    "name": "Flagler Steak House",
+    "status": "unresolved"
+  },
+  {
+    "city": "Portland",
+    "name": "Kann",
+    "status": "ok",
+    "movedKm": 2.2,
+    "neighborhood": "Central Eastside",
+    "osm": "Kann, 548, Southeast Ash Street, Central Eastside, Buckman, "
+  },
+  {
+    "city": "Raleigh",
+    "name": "Poole's Diner",
+    "status": "ok",
+    "movedKm": 0.7,
+    "neighborhood": "Warehouse District",
+    "osm": "Poole's Diner, 426, South McDowell Street, Warehouse Distric"
+  },
+  {
+    "city": "Reno",
+    "name": "Peppermill Restaurant",
+    "status": "unresolved"
+  },
+  {
+    "city": "Richmond",
+    "name": "Alewife",
+    "status": "ok",
+    "movedKm": 2.5,
+    "neighborhood": "Chimborazo",
+    "osm": "Alewife, 3120, East Marshall Street, Chimborazo, Church Hill"
+  },
+  {
+    "city": "Riverside",
+    "name": "Duane's Prime Steaks and Seafood",
+    "status": "unresolved"
+  },
+  {
+    "city": "Sacramento",
+    "name": "Localis",
+    "status": "ok",
+    "movedKm": 1.9,
+    "neighborhood": "Newton Booth",
+    "osm": "Localis, 2031, S Street, Newton Booth, Sacramento, Sacrament"
+  },
+  {
+    "city": "San Antonio",
+    "name": "Mixtli",
+    "status": "unresolved"
+  },
+  {
+    "city": "San Diego",
+    "name": "Addison",
+    "status": "ok",
+    "movedKm": 7.1,
+    "neighborhood": "Little Portugal",
+    "osm": "Addison Street, Little Portugal, Roseville, Point Loma, San "
+  },
+  {
+    "city": "San Francisco",
+    "name": "Benu",
+    "status": "ok",
+    "movedKm": 2.1,
+    "neighborhood": "South of Market",
+    "osm": "Benu, 22, Hawthorne Street, South of Market, Financial Distr"
+  },
+  {
+    "city": "San Jose",
+    "name": "The Plumed Horse",
+    "status": "unresolved"
+  },
+  {
+    "city": "Santa Ana",
+    "name": "Playground",
+    "status": "ok",
+    "movedKm": 0.3,
+    "neighborhood": "Lacy",
+    "osm": "Playground, East 4th Street, Lacy, Santa Ana, Orange County,"
+  },
+  {
+    "city": "Scottsdale",
+    "name": "Andreoli Italian Grocer",
+    "status": "ok",
+    "movedKm": 9,
+    "neighborhood": "McCormick Ranch",
+    "osm": "Andreoli Italian Grocer, 8880, East Via Linda, McCormick Ran"
+  },
+  {
+    "city": "Seattle",
+    "name": "Canlis",
+    "status": "ok",
+    "movedKm": 4.2,
+    "neighborhood": "Fremont",
+    "osm": "Canlis, 2576, Aurora Avenue North, Fremont, Seattle, King Co"
+  },
+  {
+    "city": "Spokane",
+    "name": "Italia Trattoria",
+    "status": "ok",
+    "movedKm": 1.3,
+    "neighborhood": "Browne's Addition",
+    "osm": "Italia Trattoria, 144, South Cannon Street, Browne's Additio"
+  },
+  {
+    "city": "St. Louis",
+    "name": "Bulrush",
+    "status": "unresolved"
+  },
+  {
+    "city": "St. Paul",
+    "name": "Myriel",
+    "status": "unresolved"
+  },
+  {
+    "city": "St. Petersburg",
+    "name": "Birch & Vine",
+    "status": "unresolved"
+  },
+  {
+    "city": "Stockton",
+    "name": "Papapavlo's Bistro & Bar",
+    "status": "ok",
+    "movedKm": 6.7,
+    "neighborhood": null,
+    "osm": "Papapavlo's Bistro & Bar, 501, Lincoln Center, Lincoln Cente"
+  },
+  {
+    "city": "Tampa",
+    "name": "Rooster & the Till",
+    "status": "ok",
+    "movedKm": 6.3,
+    "neighborhood": "Woodcleft",
+    "osm": "Rooster & the Till, 6500, North Florida Avenue, Woodcleft, S"
+  },
+  {
+    "city": "Toledo",
+    "name": "Registry Bistro",
+    "status": "ok",
+    "movedKm": 2.1,
+    "neighborhood": "Downtown",
+    "osm": "Registry Bistro, 425, Jefferson Avenue Cycle Track, Downtown"
+  },
+  {
+    "city": "Tucson",
+    "name": "Hacienda del Sol Guest Ranch Restaurant",
+    "status": "unresolved"
+  },
+  {
+    "city": "Tulsa",
+    "name": "Juniper",
+    "status": "ok",
+    "movedKm": 0.6,
+    "neighborhood": "Blue Dome District",
+    "osm": "Juniper, 324, East 3rd Street South, Blue Dome District, Tul"
+  },
+  {
+    "city": "Virginia Beach",
+    "name": "Orion's Roof",
+    "status": "unresolved"
+  },
+  {
+    "city": "Washington",
+    "name": "Albi",
+    "status": "ok",
+    "movedKm": 4.9,
+    "neighborhood": "Ward 8",
+    "osm": "Albi, 1346, 4th Street Southeast, Capitol Waterfront Neighbo"
+  },
+  {
+    "city": "Wichita",
+    "name": "Georges French Bistro",
+    "status": "ok",
+    "movedKm": 4.3,
+    "neighborhood": null,
+    "osm": "Georges French Bistro, 4618, East Central Avenue, Wichita, S"
+  },
+  {
+    "city": "Winston-Salem",
+    "name": "Mozelle's Fresh Southern Bistro",
+    "status": "unresolved"
+  }
+]
