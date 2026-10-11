@@ -13,15 +13,21 @@
 
 nav {
   background: #000;
-  height: 48px;
+  min-height: 48px;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  gap: 16px;
+  /* Clears the notch in landscape, where the safe area is on the sides. */
+  padding: 6px max(20px, env(safe-area-inset-right, 0px)) 6px max(20px, env(safe-area-inset-left, 0px));
+  padding-top: calc(6px + env(safe-area-inset-top, 0px));
   flex-shrink: 0;
+  position: relative;
+  z-index: 2600; /* the search panel expands out of this bar */
 }
 
 nav h1 {
   color: #fff;
+  flex-shrink: 0;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.05em;

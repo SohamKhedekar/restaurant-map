@@ -1,13 +1,18 @@
+import { useRef } from "react";
 import "./App.css";
 import WorldMap from "./components/WorldMap";
+import Search from "./components/Search";
 
 function App() {
+  const mapRef = useRef(null);
+
   return (
     <>
       <nav>
         <h1>hottest spot in town</h1>
+        <Search onSelect={hotspot => mapRef.current?.goToHotspot(hotspot)} />
       </nav>
-      <WorldMap />
+      <WorldMap ref={mapRef} />
     </>
   );
 }

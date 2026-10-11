@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useImperativeHandle, useRef, useState } from "react";
 import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import CityMarker from "./CityMarker";
 import BottomSheet from "./BottomSheet";
@@ -34,7 +34,7 @@ function nearbyHotspot(coords) {
     return near && near.km <= MAX_AUTO_FLY_KM ? near.hotspot : null;
 }
 
-export default function WorldMap() {
+export default function WorldMap({ ref }) {
     // A cached fix is known before the first paint, so the opening view is
     // derived here rather than corrected afterwards in an effect. A returning
     // visitor never sees the world view flash before the map jumps.
@@ -68,6 +68,16 @@ export default function WorldMap() {
     }, [goToHotspot]);
 
     const { status, request, getCoords } = useGeolocation({ onFix: handleFix });
+
+    // Lets the search in the nav drive the map without lifting map state out
+    // of this component. React 19 passes `ref` as an ordinary prop.
+    useImperativeHandle(ref, () => ({
+        goToHotspot(hotspot) {
+            // A deliberate choice overrides the pending automatic jump.
+            autoFlown.current = true;
+            goToHotspot(hotspot);
+        },
+    }), [goToHotspot]);
 
     // An explicit tap always acts, even if we already flew once.
     const handleNearMe = useCallback(() => {

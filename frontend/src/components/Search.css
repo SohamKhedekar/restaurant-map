@@ -1,0 +1,201 @@
+.search {
+    position: relative;
+    margin-left: auto;
+    width: min(280px, 42vw);
+}
+
+/* ── BAR ───────────────────────────────────────────────────────────────── */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    height: 36px;
+    padding: 0 12px;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+
+    transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.search.open .search-bar {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.search-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.search-input {
+    flex: 1;
+    min-width: 0;
+
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+
+    font-family: inherit;
+    /* Must stay at 16px: iOS Safari zooms into any focused input below that
+       and does not zoom back out when the field is blurred. */
+    font-size: 16px;
+}
+
+.search-input::placeholder { color: rgba(255, 255, 255, 0.45); }
+
+/* The native clear affordance collides with the custom Cancel button. */
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+.search-cancel {
+    display: none; /* touch layouts only — see the pointer: coarse block */
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: inherit;
+    font-size: 15px;
+    padding: 0 2px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+.search-backdrop { display: none; }
+
+/* ── RESULTS ───────────────────────────────────────────────────────────── */
+.search-results {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    z-index: 2500; /* above the sheet, which can be open behind it */
+
+    margin: 0;
+    padding: 6px;
+    list-style: none;
+
+    background: #141A28;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    box-shadow: 0 10px 34px rgba(0, 0, 0, 0.55);
+
+    max-height: min(60vh, 420px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+}
+
+.search-result {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+
+    padding: 9px 12px;
+    border-radius: 9px;
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+.search-result.active { background: rgba(255, 255, 255, 0.09); }
+
+.search-result-city {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.search-result-name {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 13px;
+    line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.search-result-meta {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 11.5px;
+    letter-spacing: 0.02em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.search-empty {
+    padding: 14px 12px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    text-align: center;
+}
+
+/* ── TOUCH LAYOUT ──────────────────────────────────────────────────────────
+   A dropdown anchored to a 42vw bar is unusable on a phone: the targets are
+   small and the on-screen keyboard covers most of the list. On coarse
+   pointers the search takes over the screen instead. */
+@media (pointer: coarse) {
+    /* Take the space the title leaves rather than a fixed share of the
+       viewport, which is too narrow to type in at phone widths. */
+    .search {
+        flex: 1;
+        min-width: 0;
+        width: auto;
+    }
+
+    .search.open {
+        position: fixed;
+        inset: 0;
+        z-index: 2600;
+        display: flex;
+        flex-direction: column;
+        padding: calc(10px + env(safe-area-inset-top, 0px)) 12px 0;
+        background: #0B0F18;
+    }
+
+    .search.open .search-backdrop {
+        display: block;
+        position: absolute;
+        inset: 0;
+        background: #0B0F18;
+    }
+
+    .search.open .search-bar {
+        position: relative;
+        z-index: 1;
+        height: 44px; /* full touch target */
+    }
+
+    .search.open .search-cancel { display: block; }
+
+    .search.open .search-results {
+        position: relative;
+        z-index: 1;
+        top: 0;
+        margin-top: 10px;
+        max-height: none;
+        flex: 1;
+
+        background: none;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .search-result {
+        /* 44px minimum row height for a comfortable tap. */
+        min-height: 44px;
+        padding: 11px 12px;
+        border-radius: 10px;
+    }
+
+    .search-result.active { background: none; }
+    .search-result:active { background: rgba(255, 255, 255, 0.09); }
+}

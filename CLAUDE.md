@@ -46,6 +46,16 @@ is self-signed, so phones show a warning that has to be accepted once.
 - Nearest is plain great-circle distance, which is occasionally surprising: Brooklyn
   resolves to Jersey City (9 km) over New York (11 km). Fixing that properly needs
   population weighting or a reverse-geocode, neither of which seemed worth it yet.
+- **Search** matches city, restaurant name, cuisine and neighborhood, ranked in that
+  order, with accents folded (`cafe central` finds `Café Central`). Every token must
+  match something, so `italian denver` correctly returns nothing. Tokens under 3
+  characters only match at a word start — otherwise `sf` finds Baker*sf*ield. An alias
+  table covers what people actually type: `sf`, `nyc`, `la`, `dc`, `philly`, `okc`.
+  Results are derived during render; 100 pre-normalised entries are far too cheap to
+  need an effect or a debounce.
+- `Search` lives in the nav but drives the map through an imperative handle on
+  `WorldMap` (React 19 passes `ref` as a plain prop), which keeps map state inside the
+  map instead of lifting it into `App`.
 - **Desktop:** hover a city pin → shows Leaflet `<Popup>` (phase 4 moves this to click + card)
 - **Mobile:** tap a city pin → opens `<BottomSheet>`
 - Both read from the in-memory data, so there is no network request on interaction.
@@ -64,8 +74,7 @@ In progress — a phased redesign toward a clean, modern, mobile-first UX:
 0. **Static architecture** — one data file, backend deleted, free static hosting ✅
 1. **Data model** — cuisine + neighborhood + real coordinates + validator ✅
 2. **Location** — nearest-hotspot geolocation ✅
-3. **Search** — client-side ranked city search; full-screen overlay on mobile,
-   dropdown on desktop
+3. **Search** — ranked client-side search ✅
 4. **One card** — collapse the hover-popup/bottom-sheet split into a single
    `HotspotCard` (sheet on coarse pointers, floating panel on fine ones); fix the
    dead slide-up animation, `100dvh`, safe-area insets, 44px touch targets,
