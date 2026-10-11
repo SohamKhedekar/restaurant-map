@@ -213,6 +213,31 @@ try {
             "Escape in the search leaves the card open"
         );
 
+        // ── attribution is a licence condition, not decoration ────────────
+        const attribution = page.locator(".leaflet-control-attribution");
+        const attrBox = await attribution.boundingBox();
+        const cardBox = await card.boundingBox().catch(() => null);
+        const attrVisible = await attribution.isVisible();
+        // Overlapping the card would hide it just as surely as display:none.
+        const coveredByCard =
+            attrBox && cardBox &&
+            attrBox.y + attrBox.height > cardBox.y &&
+            attrBox.y < cardBox.y + cardBox.height &&
+            attrBox.x + attrBox.width > cardBox.x &&
+            attrBox.x < cardBox.x + cardBox.width;
+        check(attrVisible && !coveredByCard, "map attribution is visible and unobscured");
+
+        // ── privacy note is reachable and says the true thing ─────────────
+        await page.locator(".privacy-trigger").click();
+        const privacyText = await page.locator(".privacy-panel").innerText();
+        check(
+            /never sent to us/i.test(privacyText),
+            "privacy note is reachable",
+            privacyText.slice(0, 40)
+        );
+        await page.locator(".privacy-close").click();
+        check(await page.locator(".privacy-panel").count() === 0, "privacy note closes");
+
         check(
             cspViolations.length === 0,
             "production CSP does not block the app",

@@ -145,6 +145,11 @@ if a service needs one, it needs a serverless function to hold it.
   name + city rather than coordinates. There are no outbound requests in app code.
 - **Fonts are self-hosted** (`@fontsource-variable/inter`). Google Fonts would see every
   visitor's IP. The only third party the page contacts is the Esri tile server.
+- **`PrivacyNote`** states all of the above on the page. Its wording is a claim about
+  the code — if anything ever starts sending data anywhere, change the note first.
+- Map attribution sits bottom-left with a mouse and **top-right on touch**, where the
+  sheet would otherwise cover it. Esri and OpenStreetMap both require it to be visible,
+  and `verify:ui` asserts it is neither hidden nor overlapped by the card.
 - **`public/_headers`** carries the production CSP and friends for Cloudflare Pages.
   `verify:ui` reads the CSP from that file and applies it to the page it tests, so a
   policy that breaks the app fails the check instead of the live site. Verified by

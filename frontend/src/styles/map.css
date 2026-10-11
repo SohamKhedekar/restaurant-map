@@ -104,12 +104,18 @@
 }
 
 /* Attribution is required by both Esri and OpenStreetMap, so it is never
-   hidden — only moved to the opposite corner from the near-me button. */
-.leaflet-bottom.leaflet-left .leaflet-control-attribution {
-    margin: 0 0 6px 6px;
+   hidden. It sits bottom-left with a mouse, and top-right on touch, where the
+   sheet would otherwise cover it. */
+.leaflet-control-attribution {
+    margin: 6px !important;
     border-radius: 6px;
-    max-width: 70vw;
+    max-width: 68vw;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+/* Clears the privacy trigger in the same corner. */
+.leaflet-bottom.leaflet-left .leaflet-control-attribution {
+    margin-left: 72px !important;
 }

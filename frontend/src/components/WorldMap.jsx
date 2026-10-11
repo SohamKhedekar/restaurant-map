@@ -3,6 +3,7 @@ import { AttributionControl, MapContainer, TileLayer, useMap } from "react-leafl
 import CityMarker from "./CityMarker";
 import HotspotCard from "./HotspotCard";
 import NearMeButton from "./NearMeButton";
+import PrivacyNote from "./PrivacyNote";
 import "../styles/map.css";
 import { useCoarsePointer } from "../hooks/useCoarsePointer";
 import { useGeolocation, readCachedLocation } from "../hooks/useGeolocation";
@@ -125,7 +126,10 @@ export default function WorldMap({ ref }) {
                 zoomControl={!coarse}
                 attributionControl={false}
             >
-                <AttributionControl position="bottomleft" prefix={false} />
+                {/* Esri and OpenStreetMap both require visible attribution. On
+                    touch the sheet covers the bottom of the screen, so it moves
+                    to the top where it stays readable with the card open. */}
+                <AttributionControl position={coarse ? "topright" : "bottomleft"} prefix={false} />
                 <FlyTo target={flyTarget} zoom={CITY_ZOOM} offsetX={offsetX} offsetY={offsetY} />
                 {/* Esri Dark Gray Canvas: free, no API key. CARTO's basemaps now
                     require a key and serve a watermarked tile instead of erroring.
@@ -151,6 +155,7 @@ export default function WorldMap({ ref }) {
             </MapContainer>
 
             <NearMeButton status={status} onClick={handleNearMe} />
+            <PrivacyNote />
 
             <HotspotCard
                 hotspot={selected}
