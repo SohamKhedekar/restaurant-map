@@ -9,7 +9,10 @@ function App() {
   return (
     <>
       <nav>
-        <h1>hottest spot in town</h1>
+        <h1>
+          <span className="flame" aria-hidden="true">●</span>
+          hottest spot<span className="long"> in town</span>
+        </h1>
         <Search onSelect={hotspot => mapRef.current?.goToHotspot(hotspot)} />
       </nav>
       <WorldMap ref={mapRef} />

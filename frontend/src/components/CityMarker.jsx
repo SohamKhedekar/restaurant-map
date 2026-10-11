@@ -1,39 +1,43 @@
-import { useRef } from "react";
-import { Marker, Popup } from "react-leaflet";
+import { useMemo } from "react";
+import { Marker } from "react-leaflet";
 import L from "leaflet";
 
-const pinIcon = L.divIcon({
-    className: "",
-    html: `<div style="
-        width:14px;height:14px;
-        background:#28254F;
-        border:2px solid #ffffff;
-        border-radius:50%;
-    "></div>`,
-    iconSize: [14, 14],
-    iconAnchor: [7, 7],
-    popupAnchor: [0, -10],
-});
+/**
+ * Leaflet sizes the clickable area to the icon, so the icon is a 44px square
+ * with a small dot drawn at its centre. The target meets the touch-size
+ * guidance without a 44px blob appearing on the map.
+ */
+const ICON_SIZE = 44;
 
-export default function CityMarker({ hotspot, isMobile, onSelect }) {
-    const markerRef = useRef(null);
+function buildIcon(active) {
+    return L.divIcon({
+        className: "pin-icon",
+        html: `<span class="pin ${active ? "pin-active" : ""}"><span class="pin-dot"></span></span>`,
+        iconSize: [ICON_SIZE, ICON_SIZE],
+        iconAnchor: [ICON_SIZE / 2, ICON_SIZE / 2],
+    });
+}
+
+const idleIcon = buildIcon(false);
+const activeIcon = buildIcon(true);
+
+export default function CityMarker({ hotspot, active, onSelect }) {
+    // Click on every input type: one interaction model, and hover-only content
+    // is unreachable on a touchscreen anyway.
+    const handlers = useMemo(
+        () => ({ click: () => onSelect(hotspot) }),
+        [hotspot, onSelect]
+    );
 
     return (
         <Marker
             position={[hotspot.lat, hotspot.lng]}
-            icon={pinIcon}
-            ref={markerRef}
-            eventHandlers={{
-                mouseover: !isMobile ? () => markerRef.current?.openPopup() : undefined,
-                click: isMobile ? () => onSelect(hotspot) : undefined,
-            }}
-        >
-            {!isMobile && (
-                <Popup>
-                    <strong>{hotspot.name}</strong>
-                    <p>{hotspot.description}</p>
-                </Popup>
-            )}
-        </Marker>
+            icon={active ? activeIcon : idleIcon}
+            eventHandlers={handlers}
+            // Read out by screen readers and shown as a native tooltip.
+            title={`${hotspot.name} — ${hotspot.city}`}
+            keyboard
+            alt={`${hotspot.name} in ${hotspot.city}`}
+        />
     );
 }

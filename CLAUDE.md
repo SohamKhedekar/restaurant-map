@@ -56,10 +56,14 @@ is self-signed, so phones show a warning that has to be accepted once.
 - `Search` lives in the nav but drives the map through an imperative handle on
   `WorldMap` (React 19 passes `ref` as a plain prop), which keeps map state inside the
   map instead of lifting it into `App`.
-- **Desktop:** hover a city pin → shows Leaflet `<Popup>` (phase 4 moves this to click + card)
-- **Mobile:** tap a city pin → opens `<BottomSheet>`
-- Both read from the in-memory data, so there is no network request on interaction.
-- Mobile detection via `useIsMobile` hook (`ontouchstart` / `maxTouchPoints`)
+- **Click or tap a pin** (both input types) → `HotspotCard`. One component renders as a
+  bottom sheet on coarse pointers and a floating panel on fine ones, so mobile-first
+  work benefits desktop automatically instead of two paths drifting apart.
+- The sheet can be swiped down to dismiss (90px threshold); Escape closes either form.
+- Input type comes from `useCoarsePointer`, which wraps `matchMedia("(pointer: coarse)")`
+  in `useSyncExternalStore`. It reacts to resize and rotation, and a touchscreen laptop
+  keeps hover — both of which the old `ontouchstart` check got wrong.
+- Reads from in-memory data, so there is no network request on interaction.
 
 ## Project vision — "Hottest Spot in Town"
 
@@ -75,10 +79,7 @@ In progress — a phased redesign toward a clean, modern, mobile-first UX:
 1. **Data model** — cuisine + neighborhood + real coordinates + validator ✅
 2. **Location** — nearest-hotspot geolocation ✅
 3. **Search** — ranked client-side search ✅
-4. **One card** — collapse the hover-popup/bottom-sheet split into a single
-   `HotspotCard` (sheet on coarse pointers, floating panel on fine ones); fix the
-   dead slide-up animation, `100dvh`, safe-area insets, 44px touch targets,
-   tap-highlight; custom pins with an active state
+4. **One card** — unified `HotspotCard`, redesigned pins, mobile fixes ✅
 5. **Ship** — title/og/theme-color meta, favicon, then deploy to Cloudflare Pages
 
 Deployment target is Cloudflare Pages (free, push-to-deploy). Nothing is deployed yet —
