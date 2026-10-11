@@ -9,29 +9,23 @@
     z-index: 2000;
 
     visibility: hidden;
+    /* The layer never swallows input. Only the card itself is interactive, so
+       the map stays pannable and zoomable with the card open — on touch as
+       well as with a mouse. There is no backdrop and no dismiss-on-outside:
+       the close button is the way out, on both layouts. */
     pointer-events: none;
     transition: visibility 0s linear 0.3s;
 }
 
 .card-layer.open {
     visibility: visible;
-    pointer-events: auto;
     transition-delay: 0s;
 }
-
-.card-backdrop {
-    position: absolute;
-    inset: 0;
-    background: rgba(4, 7, 13, 0.5);
-    opacity: 0;
-    transition: opacity 0.28s ease;
-}
-
-.card-layer.open .card-backdrop { opacity: 1; }
 
 /* ── CARD ──────────────────────────────────────────────────────────────── */
 .card {
     position: absolute;
+    pointer-events: auto;
     background: var(--surface);
     border: 1px solid var(--border);
     box-shadow: var(--shadow);
@@ -39,9 +33,6 @@
     padding: 20px;
     transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.24s ease;
 }
-
-/* While a finger is down the panel must track it exactly, with no easing. */
-.card[data-dragging="true"] { transition: none; }
 
 .card-grabber { display: none; }
 
@@ -150,30 +141,19 @@
     border-radius: var(--radius) var(--radius) 0 0;
 
     /* Keeps content clear of the iOS home indicator. */
-    padding: 8px 20px calc(22px + env(safe-area-inset-bottom, 0px));
+    padding: 18px 20px calc(22px + env(safe-area-inset-bottom, 0px));
 
     transform: translateY(100%);
-    touch-action: pan-y;
 }
 
 .card-layer.sheet.open .card { transform: translateY(0); }
 
-.card-layer.sheet .card-grabber {
-    display: block;
-    width: 38px;
-    height: 4px;
-    margin: 6px auto 14px;
-    border-radius: 999px;
-    background: var(--border-strong);
-}
+/* No grab handle: the sheet is not draggable, and the affordance would
+   promise a gesture that does nothing. */
 
 .card-layer.sheet .card-close { top: 8px; }
 
 /* ── POINTER: FLOATING PANEL ───────────────────────────────────────────── */
-.card-layer.panel { pointer-events: none; }
-.card-layer.panel .card-backdrop { display: none; }
-.card-layer.panel .card { pointer-events: auto; }
-
 .card-layer.panel .card {
     top: calc(var(--nav-height) + 16px);
     right: 16px;

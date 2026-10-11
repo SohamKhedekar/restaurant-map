@@ -69,9 +69,17 @@ export function useGeolocation({ auto = true, onFix } = {}) {
         onFixRef.current = onFix;
     });
 
-    useEffect(() => () => {
-        mounted.current = false;
-        clearTimeout(watchdog.current);
+    // The flag must be re-armed on mount, not only cleared on unmount.
+    // StrictMode mounts, unmounts and remounts in development; leaving it
+    // false after that first simulated unmount made every settle() a no-op
+    // and pinned the status on "prompting" forever.
+    useEffect(() => {
+        mounted.current = true;
+        return () => {
+            mounted.current = false;
+            inFlight.current = false;
+            clearTimeout(watchdog.current);
+        };
     }, []);
 
     /** Sets state only from the async callbacks, never synchronously. */
@@ -118,5 +126,8 @@ export function useGeolocation({ auto = true, onFix } = {}) {
         locate();
     }, [supported, locate]);
 
-    return { status, request, getCoords: () => coordsRef.current };
+    // Stable identity so callers can safely list it as a dependency.
+    const getCoords = useCallback(() => coordsRef.current, []);
+
+    return { status, request, getCoords };
 }

@@ -1,19 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { directionsUrl } from "../lib/hotspots";
 import "./HotspotCard.css";
-
-const DISMISS_PX = 90;
 
 /**
  * One card for both layouts: a bottom sheet on touch, a floating panel with a
  * mouse. Keeping it as a single component means the mobile-first work applies
  * to desktop automatically, instead of two code paths drifting apart.
+ *
+ * The card never covers the map with a backdrop and never closes on an outside
+ * interaction, so the map stays pannable while it is open. The close button is
+ * the only way out on both layouts.
  */
 export default function HotspotCard({ hotspot, open, onClose, coarse }) {
-    // Held as state, not a ref: the offset is rendered, and a ref cannot be
-    // read during render. `null` means no gesture is in progress.
-    const [drag, setDrag] = useState(null);
-
     useEffect(() => {
         if (!open) return;
         const onKeyDown = event => {
@@ -23,29 +21,6 @@ export default function HotspotCard({ hotspot, open, onClose, coarse }) {
         return () => window.removeEventListener("keydown", onKeyDown);
     }, [open, onClose]);
 
-    // Swipe down to dismiss — the gesture people already expect from a sheet.
-    const handlePointerDown = event => {
-        if (!coarse) return;
-        event.currentTarget.setPointerCapture?.(event.pointerId);
-        setDrag({ startY: event.clientY, dy: 0 });
-    };
-
-    const handlePointerMove = event => {
-        if (!drag) return;
-        // Downward only; dragging up must not detach the sheet from the edge.
-        setDrag({ ...drag, dy: Math.max(0, event.clientY - drag.startY) });
-    };
-
-    const handlePointerUp = () => {
-        if (!drag) return;
-        const travelled = drag.dy;
-        setDrag(null);
-        if (travelled > DISMISS_PX) onClose();
-    };
-
-    const dragY = drag?.dy ?? 0;
-    const dragging = drag !== null;
-
     return (
         <div
             className={`card-layer ${open ? "open" : ""} ${coarse ? "sheet" : "panel"}`}
@@ -53,19 +28,11 @@ export default function HotspotCard({ hotspot, open, onClose, coarse }) {
             // mounted so that it can animate.
             aria-hidden={!open}
         >
-            <div className="card-backdrop" onClick={onClose} />
-
             <article
                 className="card"
                 role="dialog"
                 aria-modal="false"
                 aria-label={hotspot ? `${hotspot.name}, ${hotspot.city}` : undefined}
-                style={dragY ? { transform: `translateY(${dragY}px)` } : undefined}
-                data-dragging={dragging ? "true" : undefined}
-                onPointerDown={handlePointerDown}
-                onPointerMove={handlePointerMove}
-                onPointerUp={handlePointerUp}
-                onPointerCancel={handlePointerUp}
             >
                 <div className="card-grabber" aria-hidden="true" />
 

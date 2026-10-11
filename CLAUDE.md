@@ -59,7 +59,13 @@ is self-signed, so phones show a warning that has to be accepted once.
 - **Click or tap a pin** (both input types) → `HotspotCard`. One component renders as a
   bottom sheet on coarse pointers and a floating panel on fine ones, so mobile-first
   work benefits desktop automatically instead of two paths drifting apart.
-- The sheet can be swiped down to dismiss (90px threshold); Escape closes either form.
+- The card has **no backdrop and never closes on an outside interaction** — the close
+  button is the only way out, on both layouts, and Escape also works. The layer is
+  `pointer-events: none` so the map stays pannable with the card open. Swipe-to-dismiss
+  was removed for the same reason: the card should not react to stray gestures.
+- Flying to a hotspot biases the centre so the pin lands clear of the card — up on
+  touch, left on desktop. Shifting the *projected* centre moves the pin the opposite
+  way on screen.
 - Input type comes from `useCoarsePointer`, which wraps `matchMedia("(pointer: coarse)")`
   in `useSyncExternalStore`. It reacts to resize and rotation, and a touchscreen laptop
   keeps hover — both of which the old `ontouchstart` check got wrong.
@@ -125,6 +131,10 @@ coordinate. Output lands in `scripts/geocode-report.json` for review.
 - `#root { height: 100vh }` is taller than the visible viewport on iOS Safari; needs `100dvh`.
 - The bottom sheet has no safe-area inset, so its padding runs under the home indicator.
 - `src/index.css` still carries Vite boilerplate that fights the palette.
+- A `mounted` ref must be re-armed in the effect body, not only cleared in the
+  cleanup. StrictMode mounts, unmounts and remounts in development, so a flag that is
+  only ever set to `false` stays false and silently disables every later state update.
+  This pinned the location button on "Locating…" forever.
 - React 19's `react-hooks/set-state-in-effect` lint rule rejects synchronous `setState`
   inside an effect. Responses from external systems (geolocation, fetch) must update
   state from their own callbacks, and anything knowable at first render belongs in a
