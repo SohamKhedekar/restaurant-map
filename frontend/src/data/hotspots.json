@@ -1,0 +1,1002 @@
+[
+  {
+    "city": "Albuquerque",
+    "name": "Frenchish",
+    "cuisine": "French–New Mexican",
+    "neighborhood": "Nob Hill",
+    "description": "Acclaimed French-New Mexican bistro from chef Jennifer James, a multi-time James Beard Award semifinalist celebrated for its creative seasonal menu.",
+    "lat": 35.080066,
+    "lng": -106.605214,
+    "precision": "exact"
+  },
+  {
+    "city": "Anaheim",
+    "name": "Poppy & Seed",
+    "cuisine": "Californian",
+    "neighborhood": null,
+    "description": "Michelin Guide-recognized California restaurant from James Beard Award semifinalist chef Michael Reed, set in the Anaheim Packing District with a lush garden patio.",
+    "lat": 33.832354,
+    "lng": -117.912452,
+    "precision": "exact"
+  },
+  {
+    "city": "Anchorage",
+    "name": "Moose's Tooth Pub & Pizzeria",
+    "cuisine": "Pizza & Brewpub",
+    "neighborhood": null,
+    "description": "Alaska's most beloved restaurant and a James Beard America's Classics semifinalist, legendary since 1996 for craft beers and wood-fired pizza with local toppings.",
+    "lat": 61.190448,
+    "lng": -149.869101,
+    "precision": "exact"
+  },
+  {
+    "city": "Arlington",
+    "name": "Cacharel Restaurant",
+    "cuisine": "French",
+    "neighborhood": null,
+    "description": "Legendary fine dining landmark perched atop Brookhollow Tower offering French-inspired cuisine with sweeping DFW skyline panoramas since 1976.",
+    "lat": 32.7357,
+    "lng": -97.1081,
+    "precision": "city"
+  },
+  {
+    "city": "Atlanta",
+    "name": "Lazy Betty",
+    "cuisine": "New American",
+    "neighborhood": "Midtown",
+    "description": "Michelin-starred tasting menu restaurant from chefs Ron Hsu and Aaron Phillips, blending Chinese and French influences into inventive New American cuisine.",
+    "lat": 33.781343,
+    "lng": -84.383721,
+    "precision": "exact"
+  },
+  {
+    "city": "Aurora",
+    "name": "Annette",
+    "cuisine": "New American",
+    "neighborhood": null,
+    "description": "James Beard Award-winning restaurant from chef Caroline Glover in Stanley Marketplace, celebrated for wood-fired seasonal dishes rooted in Colorado ingredients.",
+    "lat": 39.752679,
+    "lng": -104.877375,
+    "precision": "exact"
+  },
+  {
+    "city": "Austin",
+    "name": "Olamaie",
+    "cuisine": "Southern",
+    "neighborhood": null,
+    "description": "Michelin-starred Southern restaurant from chef Michael Fojtasek, a James Beard finalist known for refined dishes including its legendary buttermilk biscuits.",
+    "lat": 30.2672,
+    "lng": -97.7431,
+    "precision": "city"
+  },
+  {
+    "city": "Bakersfield",
+    "name": "Noriega's Hotel Restaurant",
+    "cuisine": "Basque",
+    "neighborhood": null,
+    "description": "James Beard America's Classics Award winner, a Basque family-style restaurant serving the community since 1893 with communal tables and traditional Pyrenees recipes.",
+    "lat": 35.3733,
+    "lng": -119.0187,
+    "precision": "city"
+  },
+  {
+    "city": "Baltimore",
+    "name": "Ammoora",
+    "cuisine": "Syrian",
+    "neighborhood": null,
+    "description": "Syrian restaurant named by the New York Times as one of America's Best Restaurants in 2024, serving stunning Levantine cuisine in the Ritz-Carlton Residences.",
+    "lat": 39.2904,
+    "lng": -76.6122,
+    "precision": "city"
+  },
+  {
+    "city": "Boise City",
+    "name": "KIN",
+    "cuisine": "New American",
+    "neighborhood": "Downtown",
+    "description": "Idaho's first James Beard Award winner, with chef Kris Komori's prix-fixe tasting menu named one of Food & Wine's 16 Best Restaurants in America.",
+    "lat": 43.616434,
+    "lng": -116.205521,
+    "precision": "exact"
+  },
+  {
+    "city": "Boston",
+    "name": "Menton",
+    "cuisine": "French–Italian",
+    "neighborhood": "Mattapan",
+    "description": "Boston's only Relais & Châteaux and Forbes Five-Star property from chef Barbara Lynch, earning a four-star Boston Globe review for its refined French-Italian cuisine.",
+    "lat": 42.272982,
+    "lng": -71.078051,
+    "precision": "exact"
+  },
+  {
+    "city": "Buffalo",
+    "name": "Waxlight Bar à Vin",
+    "cuisine": "Wine Bar",
+    "neighborhood": null,
+    "description": "James Beard Award-nominated wine-focused restaurant in Buffalo offering an inventive seasonal menu with expertly curated natural wine pairings.",
+    "lat": 42.943186,
+    "lng": -78.89045,
+    "precision": "exact"
+  },
+  {
+    "city": "Chandler",
+    "name": "Kai Restaurant",
+    "cuisine": "Native American",
+    "neighborhood": null,
+    "description": "AAA Five Diamond and Forbes Five-Star restaurant at Sheraton Wild Horse Pass, the only Native American-owned fine dining destination to hold both honors, celebrating Pima and Maricopa heritage.",
+    "lat": 33.3062,
+    "lng": -111.8413,
+    "precision": "city"
+  },
+  {
+    "city": "Charlotte",
+    "name": "Kindred",
+    "cuisine": "New American",
+    "neighborhood": "Citiside",
+    "description": "James Beard Award-nominated neighborhood restaurant in Davidson offering inventive New American cuisine anchored by its legendary milk bread.",
+    "lat": 35.246372,
+    "lng": -80.777971,
+    "precision": "exact"
+  },
+  {
+    "city": "Chesapeake",
+    "name": "Cork & Bull Chophouse",
+    "cuisine": "Steakhouse",
+    "neighborhood": null,
+    "description": "Chesapeake's only Wine Spectator Award of Excellence recipient, offering impeccably sourced prime steaks and a refined wine-forward dining experience.",
+    "lat": 36.7682,
+    "lng": -76.2875,
+    "precision": "city"
+  },
+  {
+    "city": "Chicago",
+    "name": "Alinea",
+    "cuisine": "Avant-Garde Tasting",
+    "neighborhood": "Ranch Triangle",
+    "description": "Three-Michelin-star restaurant from chef Grant Achatz, renowned for avant-garde multi-course tasting menus that redefine American fine dining.",
+    "lat": 41.913437,
+    "lng": -87.648199,
+    "precision": "exact"
+  },
+  {
+    "city": "Chula Vista",
+    "name": "Romesco Mexiterranean Bistro",
+    "cuisine": "Baja–Mediterranean",
+    "neighborhood": null,
+    "description": "Acclaimed Baja-Mediterranean fusion bistro from chef Javier Plascencia, celebrated for inventive small plates bridging Mexican and Mediterranean culinary traditions.",
+    "lat": 32.660182,
+    "lng": -117.033878,
+    "precision": "exact"
+  },
+  {
+    "city": "Cincinnati",
+    "name": "The Aperture",
+    "cuisine": "Mediterranean",
+    "neighborhood": null,
+    "description": "The only Ohio restaurant named to the New York Times' America's Best Restaurants 2024, offering a creative Mediterranean-inspired tasting menu in Walnut Hills.",
+    "lat": 39.1031,
+    "lng": -84.512,
+    "precision": "city"
+  },
+  {
+    "city": "Cleveland",
+    "name": "Cordelia",
+    "cuisine": "New American",
+    "neighborhood": "Downtown Cleveland",
+    "description": "James Beard Award-nominated New American restaurant from chef Vinnie Cimino, lauded for its refined seasonal tasting menu and commitment to Ohio producers.",
+    "lat": 41.498794,
+    "lng": -81.690216,
+    "precision": "exact"
+  },
+  {
+    "city": "Colorado Springs",
+    "name": "The Rabbit Hole",
+    "cuisine": "New American",
+    "neighborhood": "Historic Uptown",
+    "description": "Celebrated underground cocktail bar and restaurant in downtown Colorado Springs, lauded for inventive farm-to-table seasonal American small plates.",
+    "lat": 38.835422,
+    "lng": -104.822833,
+    "precision": "exact"
+  },
+  {
+    "city": "Columbus",
+    "name": "Agni",
+    "cuisine": "Indian",
+    "neighborhood": null,
+    "description": "Named one of Bon Appétit's 20 Best New Restaurants of 2024, celebrating Indian cuisine through a sophisticated tasting menu format.",
+    "lat": 39.9612,
+    "lng": -82.9988,
+    "precision": "city"
+  },
+  {
+    "city": "Corpus Christi",
+    "name": "Waterfront Seafood at the Congressman Solomon P. Ortiz International Center",
+    "cuisine": "Seafood",
+    "neighborhood": null,
+    "description": "Acclaimed harborside fine dining destination celebrating the Gulf Coast's freshest seafood in a stunning waterfront setting overlooking Corpus Christi Bay.",
+    "lat": 27.8006,
+    "lng": -97.3964,
+    "precision": "city"
+  },
+  {
+    "city": "Dallas",
+    "name": "Georgie by Curtis Stone",
+    "cuisine": "Steakhouse",
+    "neighborhood": null,
+    "description": "Michelin Guide-recommended steakhouse from celebrity chef Curtis Stone, celebrated for prime cuts and polished New American cuisine.",
+    "lat": 32.7767,
+    "lng": -96.797,
+    "precision": "city"
+  },
+  {
+    "city": "Denver",
+    "name": "The Wolf's Tailor",
+    "cuisine": "Japanese–New American",
+    "neighborhood": "Sunnyside",
+    "description": "Michelin-starred restaurant from the James Beard Award-winning ID EST Hospitality Group, offering an inventive Japanese-influenced tasting menu with Colorado ingredients.",
+    "lat": 39.772776,
+    "lng": -105.011096,
+    "precision": "exact"
+  },
+  {
+    "city": "Detroit",
+    "name": "Freya",
+    "cuisine": "New American",
+    "neighborhood": "New Center",
+    "description": "Named best restaurant in Detroit and one of America's best by the New York Times, with James Beard-nominated chef Doug Hewitt leading innovative contemporary cuisine.",
+    "lat": 42.372233,
+    "lng": -83.067108,
+    "precision": "exact"
+  },
+  {
+    "city": "Durham",
+    "name": "Mateo Bar de Tapas",
+    "cuisine": "Spanish Tapas",
+    "neighborhood": null,
+    "description": "Celebrated Spanish tapas restaurant in downtown Durham consistently named among the best restaurants in North Carolina, known for its vibrant pintxos and Iberian wine list.",
+    "lat": 35.994,
+    "lng": -78.8986,
+    "precision": "city"
+  },
+  {
+    "city": "El Paso",
+    "name": "Cafe Central",
+    "cuisine": "Contemporary American",
+    "neighborhood": "Downtown Historic District",
+    "description": "El Paso's only recipient of the Wine Spectator Best Award of Excellence for over a decade, and a Distinguished Restaurants of North America honoree.",
+    "lat": 31.758442,
+    "lng": -106.488408,
+    "precision": "exact"
+  },
+  {
+    "city": "Fort Wayne",
+    "name": "Coney Island Wiener Stand",
+    "cuisine": "Hot Dogs",
+    "neighborhood": null,
+    "description": "Fort Wayne's most beloved culinary landmark since 1914, a James Beard America's Classics honoree renowned for its signature Coney dog and old-school atmosphere.",
+    "lat": 41.0793,
+    "lng": -85.1394,
+    "precision": "city"
+  },
+  {
+    "city": "Fort Worth",
+    "name": "Reata Restaurant",
+    "cuisine": "Texas Ranch",
+    "neighborhood": "Downtown Fort Worth",
+    "description": "Iconic Texas ranch cuisine institution in Sundance Square, beloved for its pan-seared tenderloin and cowboy-inspired dishes since 1995.",
+    "lat": 32.754855,
+    "lng": -97.33278,
+    "precision": "exact"
+  },
+  {
+    "city": "Fremont",
+    "name": "Massimo's Ristorante",
+    "cuisine": "Italian",
+    "neighborhood": null,
+    "description": "A Fremont landmark since 1976 featured on KQED's Check Please Bay Area, celebrated for seasonal Italian cuisine prepared with French-trained precision by owner Bill Rinetti Jr.",
+    "lat": 37.533216,
+    "lng": -121.999328,
+    "precision": "exact"
+  },
+  {
+    "city": "Fresno",
+    "name": "Annex Kitchen",
+    "cuisine": "Italian",
+    "neighborhood": null,
+    "description": "Chef Jimmy Pardini's acclaimed wood-fired restaurant weaving local San Joaquin Valley ingredients into seasonal Italian-influenced dishes and handmade pastas.",
+    "lat": 36.807575,
+    "lng": -119.832316,
+    "precision": "exact"
+  },
+  {
+    "city": "Garland",
+    "name": "Mariana's Mexican Food",
+    "cuisine": "Mexican",
+    "neighborhood": null,
+    "description": "A Garland institution celebrated for generations of authentic interior Mexican home cooking, drawing devoted regulars across the Dallas region for its handmade tortillas and slow-braised meats.",
+    "lat": 32.9126,
+    "lng": -96.6389,
+    "precision": "city"
+  },
+  {
+    "city": "Gilbert",
+    "name": "Joe's Farm Grill",
+    "cuisine": "American Grill",
+    "neighborhood": null,
+    "description": "Featured on Food Network's Diners, Drive-Ins, and Dives, a beloved farm-to-table grill set in the 1960s Johnston Ranch house within the Agritopia community.",
+    "lat": 33.321859,
+    "lng": -111.725443,
+    "precision": "exact"
+  },
+  {
+    "city": "Glendale",
+    "name": "Arrowhead Grill",
+    "cuisine": "Steakhouse",
+    "neighborhood": null,
+    "description": "Wine Spectator Award of Excellence steakhouse celebrated for prime beef dry-aged in-house, wood-fired preparations, and an elegant atmosphere in the Arrowhead area.",
+    "lat": 33.653133,
+    "lng": -112.235511,
+    "precision": "exact"
+  },
+  {
+    "city": "Greensboro",
+    "name": "Machete",
+    "cuisine": "Contemporary American",
+    "neighborhood": null,
+    "description": "James Beard Award-nominated restaurant named one of America's Top 50 Wine Restaurants by Wine Enthusiast 2024, serving bold contemporary American cuisine.",
+    "lat": 36.079395,
+    "lng": -79.794141,
+    "precision": "exact"
+  },
+  {
+    "city": "Henderson",
+    "name": "Locale Italian Kitchen",
+    "cuisine": "Italian",
+    "neighborhood": null,
+    "description": "Acclaimed Henderson Italian destination celebrated for handmade pastas, wood-fired dishes, and an outstanding regional Italian wine list.",
+    "lat": 36.0395,
+    "lng": -114.9817,
+    "precision": "city"
+  },
+  {
+    "city": "Honolulu",
+    "name": "La Mer",
+    "cuisine": "French",
+    "neighborhood": "Waikīkī",
+    "description": "Hawaii's only AAA Five Diamond and Forbes Five-Star restaurant, located in the historic Halekulani Hotel with over 30 years of consecutive award recognition.",
+    "lat": 21.278338,
+    "lng": -157.832021,
+    "precision": "exact"
+  },
+  {
+    "city": "Houston",
+    "name": "March",
+    "cuisine": "Mediterranean",
+    "neighborhood": null,
+    "description": "Michelin-starred Mediterranean tasting menu from chef Felipe Riccio and Master Sommelier June Rodil, one of Houston's most celebrated fine dining destinations.",
+    "lat": 29.7604,
+    "lng": -95.3698,
+    "precision": "city"
+  },
+  {
+    "city": "Huntsville",
+    "name": "Cotton Row Restaurant",
+    "cuisine": "Contemporary American",
+    "neighborhood": null,
+    "description": "Huntsville's premier fine dining destination in a historic 1821 cotton warehouse, recognized by OpenTable and Southern Living for its refined American cuisine and outstanding wine list.",
+    "lat": 34.729449,
+    "lng": -86.585043,
+    "precision": "exact"
+  },
+  {
+    "city": "Indianapolis",
+    "name": "Bluebeard",
+    "cuisine": "New American",
+    "neighborhood": "Fletcher Place",
+    "description": "James Beard Award-nominated Indianapolis cornerstone set in the historic Pogue's Run Grocer building, celebrated for creative New American small plates.",
+    "lat": 39.757616,
+    "lng": -86.146018,
+    "precision": "exact"
+  },
+  {
+    "city": "Irvine",
+    "name": "Oliver's Prime",
+    "cuisine": "Steakhouse",
+    "neighborhood": null,
+    "description": "Acclaimed fine dining steakhouse from chef Erik De Marchi in Irvine Spectrum, known for impeccable USDA prime cuts and refined housemade pastas.",
+    "lat": 33.6846,
+    "lng": -117.8265,
+    "precision": "city"
+  },
+  {
+    "city": "Irving",
+    "name": "Andalous Mediterranean Grill",
+    "cuisine": "Mediterranean",
+    "neighborhood": "Las Colinas",
+    "description": "Award-winning Mediterranean restaurant from twin chefs Sam and Wassim Merched, beloved for handmade bread, charcoal-grilled kababs, and authentic Levantine flavors since 2012.",
+    "lat": 32.89714,
+    "lng": -96.958106,
+    "precision": "exact"
+  },
+  {
+    "city": "Jacksonville",
+    "name": "Restaurant Orsay",
+    "cuisine": "French–New American",
+    "neighborhood": "Avondale",
+    "description": "Beloved Riverside bistro offering French-inspired New American cuisine in an intimate, art-filled setting with an outstanding wine list.",
+    "lat": 30.300246,
+    "lng": -81.709974,
+    "precision": "exact"
+  },
+  {
+    "city": "Jersey City",
+    "name": "Battello",
+    "cuisine": "Italian",
+    "neighborhood": "Newport",
+    "description": "Award-winning waterfront Italian restaurant on the Hudson with sweeping Manhattan skyline views and a celebrated housemade pasta program.",
+    "lat": 40.725431,
+    "lng": -74.032464,
+    "precision": "exact"
+  },
+  {
+    "city": "Kansas City",
+    "name": "Affäre",
+    "cuisine": "German",
+    "neighborhood": "Downtown Kansas City",
+    "description": "James Beard Award-nominated family-owned German restaurant blending traditional and contemporary culinary artistry with farm-fresh, all-natural seasonal ingredients.",
+    "lat": 39.090023,
+    "lng": -94.583483,
+    "precision": "exact"
+  },
+  {
+    "city": "Laredo",
+    "name": "Tack Room Tavern",
+    "cuisine": "Steakhouse",
+    "neighborhood": null,
+    "description": "Laredo's most distinguished fine dining destination, celebrated for prime steaks and Gulf seafood with an extensive wine list in a refined ranch-house setting.",
+    "lat": 27.5306,
+    "lng": -99.4803,
+    "precision": "city"
+  },
+  {
+    "city": "Las Vegas",
+    "name": "é by José Andrés",
+    "cuisine": "Spanish",
+    "neighborhood": null,
+    "description": "Intimate 8-seat Michelin-starred counter from world-renowned chef José Andrés, offering an avant-garde tasting menu inside the Jaleo restaurant.",
+    "lat": 36.110301,
+    "lng": -115.174327,
+    "precision": "exact"
+  },
+  {
+    "city": "Lexington",
+    "name": "Coles 735 Main",
+    "cuisine": "Southern",
+    "neighborhood": null,
+    "description": "Lexington's premier fine dining destination in a beautifully restored 1938 landmark, showcasing elevated Southern cuisine with locally sourced ingredients and an award-winning bourbon selection.",
+    "lat": 38.0406,
+    "lng": -84.5037,
+    "precision": "city"
+  },
+  {
+    "city": "Lincoln",
+    "name": "Dish",
+    "cuisine": "New American",
+    "neighborhood": "Downtown",
+    "description": "Upscale downtown Lincoln restaurant helmed by chef Rachel McGill, the first Lincoln chef nominated for a James Beard Award, known for refined seasonal American cuisine.",
+    "lat": 40.813796,
+    "lng": -96.705228,
+    "precision": "exact"
+  },
+  {
+    "city": "Long Beach",
+    "name": "Michael's on Naples",
+    "cuisine": "Italian",
+    "neighborhood": null,
+    "description": "Award-winning Italian restaurant from James Beard-nominated chef Michael Dene, acclaimed for handmade pastas and an outstanding Italian wine list.",
+    "lat": 33.7701,
+    "lng": -118.1937,
+    "precision": "city"
+  },
+  {
+    "city": "Los Angeles",
+    "name": "Kato",
+    "cuisine": "Taiwanese–American",
+    "neighborhood": "Arts District",
+    "description": "Michelin two-star Taiwanese-American tasting menu helmed by chef Jon Yao, celebrated as one of the best restaurants in the country.",
+    "lat": 34.034071,
+    "lng": -118.241106,
+    "precision": "exact"
+  },
+  {
+    "city": "Louisville",
+    "name": "North of Bourbon",
+    "cuisine": "New American",
+    "neighborhood": null,
+    "description": "Acclaimed New American restaurant named to the New York Times' 50 Best Restaurants in America, spotlighting Kentucky ingredients with seasonal creativity.",
+    "lat": 38.2527,
+    "lng": -85.7585,
+    "precision": "city"
+  },
+  {
+    "city": "Lubbock",
+    "name": "West Table Kitchen & Bar",
+    "cuisine": "Contemporary American",
+    "neighborhood": null,
+    "description": "Lubbock's premier contemporary dining destination lauded for creative American cuisine, innovative craft cocktails, and warm hospitality in an upscale setting.",
+    "lat": 33.5779,
+    "lng": -101.8552,
+    "precision": "city"
+  },
+  {
+    "city": "Madison",
+    "name": "L'Etoile",
+    "cuisine": "Farm-to-Table",
+    "neighborhood": "First Settlement",
+    "description": "Wisconsin's preeminent farm-to-table restaurant from James Beard Award-winning chef Tory Miller, celebrating local producers for over 45 years in a Capitol Square landmark.",
+    "lat": 43.075216,
+    "lng": -89.382322,
+    "precision": "exact"
+  },
+  {
+    "city": "Memphis",
+    "name": "Hog & Hominy",
+    "cuisine": "Southern Italian",
+    "neighborhood": null,
+    "description": "James Beard Award-nominated restaurant from Andrew Ticer and Michael Hudman, celebrated by GQ and Bon Appétit for its creative Southern Italian cuisine.",
+    "lat": 35.1495,
+    "lng": -90.049,
+    "precision": "city"
+  },
+  {
+    "city": "Mesa",
+    "name": "Republique Kitchen & Bar",
+    "cuisine": "French–American",
+    "neighborhood": null,
+    "description": "Lauded Arizona bistro from chef Charles Wiley offering refined seasonal American cuisine with French influences and a celebrated wine program in East Mesa.",
+    "lat": 33.4152,
+    "lng": -111.8315,
+    "precision": "city"
+  },
+  {
+    "city": "Miami",
+    "name": "Boia De",
+    "cuisine": "Italian–American",
+    "neighborhood": null,
+    "description": "Michelin-starred Italian-American neighborhood restaurant from chefs Alejandro Ortiz and Carlos Padron, celebrated for refined small plates and natural wines.",
+    "lat": 25.7617,
+    "lng": -80.1918,
+    "precision": "city"
+  },
+  {
+    "city": "Milwaukee",
+    "name": "Sanford Restaurant",
+    "cuisine": "New American",
+    "neighborhood": "Brady Street",
+    "description": "James Beard Award-winning New American restaurant with chef Angie Sanford, a 30-year Milwaukee institution renowned for its meticulous seasonal tasting menus.",
+    "lat": 43.050455,
+    "lng": -87.904989,
+    "precision": "exact"
+  },
+  {
+    "city": "Minneapolis",
+    "name": "Hai Hai",
+    "cuisine": "Vietnamese",
+    "neighborhood": "Holland",
+    "description": "James Beard Award-winning Southeast Asian restaurant from chef Christina Nguyen, beloved for vibrant Vietnamese-inspired dishes and a festive atmosphere.",
+    "lat": 45.009843,
+    "lng": -93.262799,
+    "precision": "exact"
+  },
+  {
+    "city": "Nashville",
+    "name": "Bastion",
+    "cuisine": "New American",
+    "neighborhood": "Wedgewood-Houston",
+    "description": "Michelin-starred restaurant from chef Josh Habiger, offering an intimate chef's tasting menu rooted in seasonal American cooking in a converted industrial space.",
+    "lat": 36.142983,
+    "lng": -86.766433,
+    "precision": "exact"
+  },
+  {
+    "city": "New Orleans",
+    "name": "Commander's Palace",
+    "cuisine": "Creole",
+    "neighborhood": "Central City Historic District",
+    "description": "Legendary Garden District institution since 1893, winner of multiple James Beard Awards and the restaurant that launched the careers of Emeril Lagasse and Paul Prudhomme.",
+    "lat": 29.928834,
+    "lng": -90.084213,
+    "precision": "exact"
+  },
+  {
+    "city": "New York",
+    "name": "Tatiana by Kwame Onwuachi",
+    "cuisine": "Afro-Caribbean",
+    "neighborhood": "Lincoln Square",
+    "description": "Michelin-starred Afro-Caribbean restaurant at Lincoln Center, named NYC's #1 restaurant by the New York Times in 2024.",
+    "lat": 40.772696,
+    "lng": -73.983342,
+    "precision": "exact"
+  },
+  {
+    "city": "Newark",
+    "name": "Seabra's Marisqueira",
+    "cuisine": "Portuguese Seafood",
+    "neighborhood": null,
+    "description": "Iconic Portuguese seafood institution in the Ironbound neighborhood, beloved since 1976 for its whole grilled branzino, fresh bacalhau, and festive atmosphere.",
+    "lat": 40.7357,
+    "lng": -74.1724,
+    "precision": "city"
+  },
+  {
+    "city": "Norfolk",
+    "name": "Cure Restaurant",
+    "cuisine": "Coastal Virginian",
+    "neighborhood": null,
+    "description": "Norfolk's most celebrated James Beard Award-nominated restaurant, with chef-owner Todd Jurich pioneering refined Virginia coastal cuisine with a focus on local Chesapeake Bay ingredients.",
+    "lat": 36.8508,
+    "lng": -76.2859,
+    "precision": "city"
+  },
+  {
+    "city": "North Las Vegas",
+    "name": "Gilley's Saloon",
+    "cuisine": "Barbecue",
+    "neighborhood": null,
+    "description": "Beloved Texas-inspired honky-tonk restaurant at Treasure Island celebrated for its smoked brisket, giant Texas toast, and lively Western atmosphere.",
+    "lat": 36.1989,
+    "lng": -115.1175,
+    "precision": "city"
+  },
+  {
+    "city": "Oakland",
+    "name": "Burdell",
+    "cuisine": "African American",
+    "neighborhood": "Temescal",
+    "description": "James Beard Award-nominated restaurant celebrating African American culinary heritage through a creative seasonal menu rooted in the Bay Area.",
+    "lat": 37.834152,
+    "lng": -122.262845,
+    "precision": "exact"
+  },
+  {
+    "city": "Oklahoma City",
+    "name": "Bar Sen",
+    "cuisine": "Lao",
+    "neighborhood": null,
+    "description": "Lao noodle restaurant from four-time James Beard nominee chef Jeff Chanchaleune, named one of America's 50 Best Restaurants by the New York Times in 2025.",
+    "lat": 35.4676,
+    "lng": -97.5164,
+    "precision": "city"
+  },
+  {
+    "city": "Omaha",
+    "name": "The Boiler Room",
+    "cuisine": "New American",
+    "neighborhood": null,
+    "description": "James Beard Award-nominated New American restaurant in Old Market, celebrated for its inventive seasonal tasting menus sourced from local Nebraska farms.",
+    "lat": 41.2565,
+    "lng": -95.9345,
+    "precision": "city"
+  },
+  {
+    "city": "Orlando",
+    "name": "Victoria & Albert's",
+    "cuisine": "Contemporary American",
+    "neighborhood": null,
+    "description": "AAA Five Diamond, Forbes Five-Star, and Michelin-starred intimate dining room at Walt Disney World, offering an exquisite prix-fixe menu that is among Florida's finest.",
+    "lat": 28.5383,
+    "lng": -81.3792,
+    "precision": "city"
+  },
+  {
+    "city": "Philadelphia",
+    "name": "Zahav",
+    "cuisine": "Israeli",
+    "neighborhood": "Center City",
+    "description": "James Beard Award-winning Israeli restaurant from chef Michael Solomonov, renowned for its wood-roasted lamb and hummus tehina.",
+    "lat": 39.946306,
+    "lng": -75.145187,
+    "precision": "exact"
+  },
+  {
+    "city": "Phoenix",
+    "name": "Bacanora",
+    "cuisine": "Sonoran Mexican",
+    "neighborhood": "Downtown",
+    "description": "James Beard Award-winning Mexican restaurant from chef Rene Andrade, spotlighting Sonoran cuisine with wood-fired dishes and mezcal.",
+    "lat": 33.456994,
+    "lng": -112.089563,
+    "precision": "exact"
+  },
+  {
+    "city": "Pittsburgh",
+    "name": "Pusadee's Garden",
+    "cuisine": "Thai",
+    "neighborhood": null,
+    "description": "James Beard Award-nominated Thai restaurant from chef Pusadee Tongdee, featuring an enchanting garden dining room and authentic northern Thai cuisine.",
+    "lat": 40.4406,
+    "lng": -79.9959,
+    "precision": "city"
+  },
+  {
+    "city": "Plano",
+    "name": "Uchi Dallas",
+    "cuisine": "Japanese",
+    "neighborhood": null,
+    "description": "James Beard Award-winning chef Tyson Cole's acclaimed Japanese-inspired restaurant in Plano, celebrated for creative sushi and inventive izakaya-style small plates.",
+    "lat": 33.0198,
+    "lng": -96.6989,
+    "precision": "city"
+  },
+  {
+    "city": "Port St. Lucie",
+    "name": "Flagler Steak House",
+    "cuisine": "Steakhouse",
+    "neighborhood": null,
+    "description": "Revered Treasure Coast fine dining institution at PGA Village Verano, celebrated for prime dry-aged steaks and classic tableside preparations.",
+    "lat": 27.293,
+    "lng": -80.3503,
+    "precision": "city"
+  },
+  {
+    "city": "Portland",
+    "name": "Kann",
+    "cuisine": "Haitian",
+    "neighborhood": "Central Eastside",
+    "description": "James Beard Award-winning Haitian restaurant from chef Gregory Gourdet, ranked #27 on North America's 50 Best Restaurants 2025 and named Portland's best restaurant.",
+    "lat": 45.521391,
+    "lng": -122.65993,
+    "precision": "exact"
+  },
+  {
+    "city": "Raleigh",
+    "name": "Poole's Diner",
+    "cuisine": "New American Diner",
+    "neighborhood": "Warehouse District",
+    "description": "Beloved James Beard Award-winning New American diner from chef Ashley Christensen, iconic for its rotating seasonal chalkboard menu and cult-classic macaroni au gratin.",
+    "lat": 35.774728,
+    "lng": -78.642308,
+    "precision": "exact"
+  },
+  {
+    "city": "Reno",
+    "name": "Peppermill Restaurant",
+    "cuisine": "American Comfort",
+    "neighborhood": null,
+    "description": "2024 James Beard America's Classics Award winner, a beloved Reno institution since 1971 known for its 24-hour service, retro decor, and lavish comfort food.",
+    "lat": 39.5296,
+    "lng": -119.8138,
+    "precision": "city"
+  },
+  {
+    "city": "Richmond",
+    "name": "Alewife",
+    "cuisine": "Seafood",
+    "neighborhood": "Chimborazo",
+    "description": "Celebrated Richmond restaurant spotlighting Mid-Atlantic seafood and sustainable coastal ingredients with innovative preparations and a sophisticated craft cocktail program.",
+    "lat": 37.528867,
+    "lng": -77.411623,
+    "precision": "exact"
+  },
+  {
+    "city": "Riverside",
+    "name": "Duane's Prime Steaks and Seafood",
+    "cuisine": "Steakhouse",
+    "neighborhood": null,
+    "description": "AAA Four Diamond-awarded restaurant at the historic Mission Inn, holding the Wine Spectator Best of Award of Excellence since 1996.",
+    "lat": 33.9806,
+    "lng": -117.3755,
+    "precision": "city"
+  },
+  {
+    "city": "Sacramento",
+    "name": "Localis",
+    "cuisine": "Californian",
+    "neighborhood": "Newton Booth",
+    "description": "One of only two Sacramento restaurants to earn a Michelin Star, with chef Chris Barnum-Dann spotlighting hyper-local Northern California ingredients in an intimate prix-fixe setting.",
+    "lat": 38.566624,
+    "lng": -121.483007,
+    "precision": "exact"
+  },
+  {
+    "city": "San Antonio",
+    "name": "Mixtli",
+    "cuisine": "Modern Mexican",
+    "neighborhood": null,
+    "description": "Michelin-starred progressive Mexican tasting menu exploring the regional cuisines of Mexico through a rotating 12-course journey.",
+    "lat": 29.4241,
+    "lng": -98.4936,
+    "precision": "city"
+  },
+  {
+    "city": "San Diego",
+    "name": "Addison",
+    "cuisine": "California–French",
+    "neighborhood": "Little Portugal",
+    "description": "San Diego's only Forbes Five-Star restaurant, where chef William Bradley crafts elegant California-French tasting menus at Fairmont Grand Del Mar.",
+    "lat": 32.72533,
+    "lng": -117.235643,
+    "precision": "exact"
+  },
+  {
+    "city": "San Francisco",
+    "name": "Benu",
+    "cuisine": "Korean–French",
+    "neighborhood": "South of Market",
+    "description": "Three-Michelin-star restaurant from James Beard Award-winning chef Corey Lee, blending Korean heritage with French technique in a landmark tasting menu.",
+    "lat": 37.785462,
+    "lng": -122.39908,
+    "precision": "exact"
+  },
+  {
+    "city": "San Jose",
+    "name": "The Plumed Horse",
+    "cuisine": "Californian",
+    "neighborhood": null,
+    "description": "Michelin-starred South Bay institution since 1952 under chef Peter Armellino, earning a star for 15 consecutive years with impeccable seasonal California cuisine.",
+    "lat": 37.3382,
+    "lng": -121.8863,
+    "precision": "city"
+  },
+  {
+    "city": "Santa Ana",
+    "name": "Playground",
+    "cuisine": "Farm-to-Table",
+    "neighborhood": "Lacy",
+    "description": "Celebrated farm-to-table restaurant from James Beard Award-nominated chef Jason Quinn, known for its creative seasonal menu that changes daily based on local market finds.",
+    "lat": 33.747853,
+    "lng": -117.865747,
+    "precision": "exact"
+  },
+  {
+    "city": "Scottsdale",
+    "name": "Andreoli Italian Grocer",
+    "cuisine": "Italian",
+    "neighborhood": "McCormick Ranch",
+    "description": "James Beard Award-nominated Scottsdale institution from Sicilian-born chef Giovanni Scorzo, beloved for authentic housemade pastas, cured meats, and Italian pantry staples.",
+    "lat": 33.56919,
+    "lng": -111.889601,
+    "precision": "exact"
+  },
+  {
+    "city": "Seattle",
+    "name": "Canlis",
+    "cuisine": "Pacific Northwest",
+    "neighborhood": "Fremont",
+    "description": "Iconic Pacific Northwest fine dining institution open since 1950, celebrated for panoramic Lake Union views and impeccably sourced seasonal cuisine.",
+    "lat": 47.643053,
+    "lng": -122.346736,
+    "precision": "exact"
+  },
+  {
+    "city": "Spokane",
+    "name": "Italia Trattoria",
+    "cuisine": "Italian",
+    "neighborhood": "Browne's Addition",
+    "description": "Spokane's most acclaimed Italian restaurant, lauded for simple and elegant housemade pastas, wood-fired dishes, and warm hospitality in a cozy neighborhood setting.",
+    "lat": 47.655171,
+    "lng": -117.441853,
+    "precision": "exact"
+  },
+  {
+    "city": "St. Louis",
+    "name": "Bulrush",
+    "cuisine": "Ozark",
+    "neighborhood": null,
+    "description": "James Beard Award-nominated restaurant from chef Rob Connoley exploring Ozark culinary heritage through a creative tasting menu using foraged and hyper-local ingredients.",
+    "lat": 38.627,
+    "lng": -90.1994,
+    "precision": "city"
+  },
+  {
+    "city": "St. Paul",
+    "name": "Myriel",
+    "cuisine": "New American",
+    "neighborhood": null,
+    "description": "Romantic neighborhood restaurant named a Best New Chef pick by Food & Wine 2024, serving refined seasonal cuisine in a warmly lit St. Paul townhouse.",
+    "lat": 44.9537,
+    "lng": -93.09,
+    "precision": "city"
+  },
+  {
+    "city": "St. Petersburg",
+    "name": "Birch & Vine",
+    "cuisine": "Southern",
+    "neighborhood": null,
+    "description": "Award-winning farm-to-table restaurant at The Vinoy Renaissance hotel celebrated for its creative Southern-inspired seasonal cuisine and outstanding craft cocktail program.",
+    "lat": 27.7731,
+    "lng": -82.64,
+    "precision": "city"
+  },
+  {
+    "city": "Stockton",
+    "name": "Papapavlo's Bistro & Bar",
+    "cuisine": "Mediterranean",
+    "neighborhood": null,
+    "description": "Beloved Stockton institution from Andy and Jennifer Pappas serving refined continental and Mediterranean cuisine with timeless hospitality since the 1990s.",
+    "lat": 38.011792,
+    "lng": -121.323922,
+    "precision": "exact"
+  },
+  {
+    "city": "Tampa",
+    "name": "Rooster & the Till",
+    "cuisine": "New American",
+    "neighborhood": "Woodcleft",
+    "description": "James Beard Award-nominated neighborhood restaurant from chef Ferrell Alvarez, named the #1 restaurant in Tampa Bay by the Tampa Bay Times for its inventive seasonal fare.",
+    "lat": 28.006842,
+    "lng": -82.459728,
+    "precision": "exact"
+  },
+  {
+    "city": "Toledo",
+    "name": "Registry Bistro",
+    "cuisine": "New American",
+    "neighborhood": "Downtown",
+    "description": "Sophisticated New American restaurant in the Valentine Theatre building, recognized as Toledo's top fine dining destination with an elegant seasonal menu.",
+    "lat": 41.650313,
+    "lng": -83.536854,
+    "precision": "exact"
+  },
+  {
+    "city": "Tucson",
+    "name": "Hacienda del Sol Guest Ranch Restaurant",
+    "cuisine": "Southwestern",
+    "neighborhood": null,
+    "description": "Historic 1929 ranch estate restaurant beloved for its romantic setting and innovative Southwestern cuisine, a Tucson culinary landmark for decades.",
+    "lat": 32.2226,
+    "lng": -110.9747,
+    "precision": "city"
+  },
+  {
+    "city": "Tulsa",
+    "name": "Juniper",
+    "cuisine": "New American",
+    "neighborhood": "Blue Dome District",
+    "description": "Celebrated New American restaurant in the Tulsa Arts District from chef Justin Thompson, lauded for creative seasonal dishes and an outstanding craft cocktail program.",
+    "lat": 36.154863,
+    "lng": -95.986532,
+    "precision": "exact"
+  },
+  {
+    "city": "Virginia Beach",
+    "name": "Orion's Roof",
+    "cuisine": "Coastal Virginian",
+    "neighborhood": null,
+    "description": "Innovative rooftop restaurant in the Cavalier Hotel celebrated for sophisticated coastal Virginia cuisine with sweeping oceanfront views.",
+    "lat": 36.8529,
+    "lng": -75.978,
+    "precision": "city"
+  },
+  {
+    "city": "Washington",
+    "name": "Albi",
+    "cuisine": "Palestinian",
+    "neighborhood": "Ward 8",
+    "description": "Michelin-starred Palestinian restaurant from James Beard Award-winning chef Michael Rafidi, ranked #34 on North America's 50 Best Restaurants in 2025.",
+    "lat": 38.874055,
+    "lng": -77.000322,
+    "precision": "exact"
+  },
+  {
+    "city": "Wichita",
+    "name": "Georges French Bistro",
+    "cuisine": "French",
+    "neighborhood": null,
+    "description": "James Beard Award-nominated French bistro bringing authentic Lyonnaise cuisine and a stellar wine cellar to the heart of Wichita for over two decades.",
+    "lat": 37.694118,
+    "lng": -97.282439,
+    "precision": "exact"
+  },
+  {
+    "city": "Winston-Salem",
+    "name": "Mozelle's Fresh Southern Bistro",
+    "cuisine": "Southern",
+    "neighborhood": null,
+    "description": "James Beard Award semifinalist-recognized Southern bistro beloved for creative farm-to-table takes on North Carolina culinary traditions in the West End neighborhood.",
+    "lat": 36.0999,
+    "lng": -80.2442,
+    "precision": "city"
+  }
+]

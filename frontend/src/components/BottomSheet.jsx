@@ -1,19 +1,18 @@
 import "./BottomSheet.css";
 
-export default function BottomSheet({ open, onClose, restaurant }) {
-    const info = restaurant?.data;
+export default function BottomSheet({ open, onClose, hotspot }) {
     return (
         <div className={`sheet ${open ? "open" : ""}`}>
             <div className="backdrop" onClick={onClose} />
 
             <div className="panel">
-                {restaurant ? (
+                {hotspot ? (
                     <>
-                        <h2>{info.restaurant}</h2>
-                        <p>{info.description}</p>
+                        <h2>{hotspot.name}</h2>
+                        <p>{hotspot.description}</p>
                     </>
                 ) : (
-                    <p>Loading...</p>
+                    <p>No hotspot found for this city.</p>
                 )}
             </div>
         </div>

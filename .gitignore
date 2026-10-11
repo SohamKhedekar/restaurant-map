@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Dependencies — these were committed once by accident; keep them out.
+node_modules/
+
+# Build output
+dist/
+
+# Local env
+.env
+.env.local

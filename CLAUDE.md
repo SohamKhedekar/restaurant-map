@@ -1,39 +1,45 @@
 # Restaurant Map
 
-A full-stack restaurant map app. React + Vite frontend, Node.js/Express backend.
+A static restaurant map app. React + Vite, no backend — data ships with the bundle.
 
 ## Running locally
 
-**Backend** (port 3001):
-```bash
-cd backend
-node server.js
-```
-
-**Frontend** (port 5173):
 ```bash
 cd frontend
-npm run dev          # desktop only (localhost)
+npm run dev            # desktop only (localhost)
 npm run dev -- --host  # expose to local network (required for phone access)
 ```
 
-Open `http://localhost:5173` on desktop, or `http://192.168.1.156:5173` on phone (same WiFi).
+Open `https://localhost:5173` on desktop, or `https://<LAN-IP>:5173` on phone (same WiFi).
+Get the IP with `ipconfig getifaddr en0`; Vite also prints it as the Network URL.
+
+The dev server is HTTPS (`@vitejs/plugin-basic-ssl`) because geolocation needs a
+secure context, and a bare `http://192.168.x.x` origin is not one. The certificate
+is self-signed, so phones show a warning that has to be accepted once.
 
 ## Architecture
 
-- `frontend/public/cities.json` — city pin locations (name, lat, lng) for the map markers
-- `backend/data/staticRestaurants.json` — restaurant content (city, name, description, lat, lng)
-- Cities are matched by name string between the two files — they must match exactly (case-insensitive)
+- `frontend/src/data/hotspots.json` — the single data file: one entry per city
+  (`city`, `name`, `cuisine`, `neighborhood`, `description`, `lat`, `lng`, `precision`)
+  - `neighborhood` is `null` where OpenStreetMap had none (57 of 100 have one)
+  - `precision` is `"exact"` when the coordinates are the restaurant itself, `"city"`
+    when they fall back to the city center. 57/100 are exact — the other 43 are not
+    in OpenStreetMap under those names, which is the ceiling for free geocoding.
+    The UI must not imply pinpoint accuracy for `"city"` entries.
+- `frontend/src/lib/hotspots.js` — `allHotspots`, `getHotspotByCity()` and
+  `directionsUrl()`, backed by a `Map` built at module load
+  - `directionsUrl()` searches Google Maps by *name + city*, not coordinates, so it
+    resolves to the venue's real listing and stays correct for `"city"`-precision
+    entries. No per-entry URL is stored, so there is nothing to rot.
+- The data is imported into the bundle (not fetched), so there is no loading state and
+  no request per pin. Updating data means a rebuild + redeploy.
 
 ## Behavior
 
-- **Desktop:** hover a city pin → fetches restaurant from backend → shows Leaflet `<Popup>`
-- **Mobile:** tap a city pin → fetches restaurant from backend → shows `<BottomSheet>`
+- **Desktop:** hover a city pin → shows Leaflet `<Popup>` (phase 4 moves this to click + card)
+- **Mobile:** tap a city pin → opens `<BottomSheet>`
+- Both read from the in-memory data, so there is no network request on interaction.
 - Mobile detection via `useIsMobile` hook (`ontouchstart` / `maxTouchPoints`)
-
-## API
-
-`GET /api/restaurants?city=Paris` — returns `{ success, data }` or `{ success: false, message }`
 
 ## Project vision — "Hottest Spot in Town"
 
@@ -41,9 +47,43 @@ Show the single top-rated/trending restaurant per city as a pin on a world map. 
 
 ## Roadmap
 
-1. **Data** — Populate 100 most populous US cities into `cities.json` and `staticRestaurants.json` (name, one-line description, lat/lng per restaurant)
-2. **Geolocation** — Auto-detect user location on page load, zoom map to ~50-mile radius
-3. **UI** — Dark mode map, black nav header with left-aligned "hottest spot in town" title, consistent typography
+Done: 100 US cities populated; dark map; black nav header; basic geolocation flyTo.
+
+In progress — a phased redesign toward a clean, modern, mobile-first UX:
+
+0. **Static architecture** — one data file, backend deleted, free static hosting ✅
+1. **Data model** — cuisine + neighborhood + real coordinates + validator ✅
+2. **Location** — haversine to the *nearest* hotspot (not raw coords), non-blocking
+   with a timeout, cached in `localStorage`, plus a "near me" button for the
+   denied/timeout path
+3. **Search** — client-side ranked city search; full-screen overlay on mobile,
+   dropdown on desktop
+4. **One card** — collapse the hover-popup/bottom-sheet split into a single
+   `HotspotCard` (sheet on coarse pointers, floating panel on fine ones); fix the
+   dead slide-up animation, `100dvh`, safe-area insets, 44px touch targets,
+   tap-highlight; custom pins with an active state
+5. **Ship** — title/og/theme-color meta, favicon, then deploy to Cloudflare Pages
+
+Deployment target is Cloudflare Pages (free, push-to-deploy). Nothing is deployed yet —
+local web + phone testing comes first.
+
+## Data tooling
+
+```bash
+cd frontend
+npm run check:data   # validate hotspots.json — exits non-zero on error
+npm run geocode      # one-time Nominatim pass; rewrites coords + neighborhoods
+```
+
+`check:data` catches missing/unknown keys, duplicate cities, out-of-range or swapped
+coordinates, a bad `precision` value, and two hotspots sharing a point (which would
+hide one pin behind another). Run it after any edit to the data.
+
+`geocode` is a **manual** tool, never part of the build. Nominatim allows one request
+per second and requires an identifying User-Agent, so a full run takes ~3 minutes. It
+only accepts a result within 40 km of the city center, because Nominatim will happily
+return a same-named restaurant in another state; everything else keeps the city
+coordinate. Output lands in `scripts/geocode-report.json` for review.
 
 ## Development approach
 
@@ -52,12 +92,23 @@ Show the single top-rated/trending restaurant per city as a pin on a world map. 
 
 ## Known gaps
 
-- London, Tokyo, Mumbai have map pins but no restaurant data in `staticRestaurants.json`
-- `backend/utils/responseFormat.js` is empty
-- Frontend uses a Vite proxy (`/api` → `http://localhost:3001`) to avoid mixed content issues with HTTPS dev server
+- `useIsMobile` sniffs touch support once at render, so a touchscreen laptop gets the
+  mobile path and loses hover, and it never re-evaluates on resize/orientation change.
+  Phase 4 replaces it with `matchMedia("(pointer: coarse)")` plus a change listener.
+- `.sheet` toggles `display: none` → `block` in the same frame as the panel's transform,
+  so the slide-up transition never plays. Fixed in phase 4.
+- `#root { height: 100vh }` is taller than the visible viewport on iOS Safari; needs `100dvh`.
+- The bottom sheet has no safe-area inset, so its padding runs under the home indicator.
+- `src/index.css` still carries Vite boilerplate that fights the palette.
+- Only the 100 most populous US cities are covered — no international hotspots.
 
 ## Stack
 
-- Frontend: React 19, Vite, react-leaflet, leaflet
-- Backend: Express 5, cors
+- React 19, Vite 7, react-leaflet 5, leaflet 1.9 — no backend, no runtime dependencies
+  beyond the map tile service
+- **Tiles: Esri Dark Gray Canvas** (`server.arcgisonline.com`), free and keyless, loaded as
+  two layers (Base for geometry, Reference for labels). CARTO's basemaps were dropped in
+  Oct 2026 because they now require an API key and silently serve an "API KEY REQUIRED"
+  watermark tile rather than returning an error — if the map ever looks wrong, check a
+  raw tile URL with `curl` and actually open the PNG before debugging the app code.
 - Git remote: `git@github.com:SohamKhedekar/restaurant-map.git`
